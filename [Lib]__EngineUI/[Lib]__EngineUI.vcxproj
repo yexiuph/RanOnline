@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_RZ|Win32">
+      <Configuration>Release_RZ</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{D54A7A50-1C22-4199-925F-FE7A09EA1A5A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>LibEngineUI</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>EngineUI</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>EngineUI</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>EngineUID</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalIncludeDirectories>./;./Sources;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxTools;../[Lib]__MfcEx/Sources;../Dependency/directx</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalIncludeDirectories>./;./Sources;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxTools;../[Lib]__MfcEx/Sources;../Dependency/directx</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>./;./Sources;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxTools;../[Lib]__MfcEx/Sources;../Dependency/directx</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Sources\BasicAnimationBox.h" />
+    <ClInclude Include="Sources\BasicButton.h" />
+    <ClInclude Include="Sources\BasicCarrat.h" />
+    <ClInclude Include="Sources\BasicProgressBar.h" />
+    <ClInclude Include="Sources\BasicScrollBar.h" />
+    <ClInclude Include="Sources\BasicScrollThumb.h" />
+    <ClInclude Include="Sources\BasicScrollThumbFrame.h" />
+    <ClInclude Include="Sources\BasicTextBox.h" />
+    <ClInclude Include="Sources\BasicTree.h" />
+    <ClInclude Include="Sources\BasicTreeNode.h" />
+    <ClInclude Include="Sources\Cursor.h" />
+    <ClInclude Include="Sources\GameTextLoader.h" />
+    <ClInclude Include="Sources\InterfaceCfg.h" />
+    <ClInclude Include="Sources\InterfaceCfgXml.h" />
+    <ClInclude Include="Sources\PositionKeeper.h" />
+    <ClInclude Include="Sources\RanXML.h" />
+    <ClInclude Include="Sources\RanXMLParser.h" />
+    <ClInclude Include="Sources\tinyxml.h" />
+    <ClInclude Include="Sources\UIControl.h" />
+    <ClInclude Include="Sources\UIControlContainer.h" />
+    <ClInclude Include="Sources\UIControlDefine.h" />
+    <ClInclude Include="Sources\UIControlMessage.h" />
+    <ClInclude Include="Sources\UIDataType.h" />
+    <ClInclude Include="Sources\UIDebugSet.h" />
+    <ClInclude Include="Sources\UIEditBox.h" />
+    <ClInclude Include="Sources\UIEditBoxMan.h" />
+    <ClInclude Include="Sources\UIFocusContainer.h" />
+    <ClInclude Include="Sources\UIGroup.h" />
+    <ClInclude Include="Sources\UIKeyCheck.h" />
+    <ClInclude Include="Sources\UIMan.h" />
+    <ClInclude Include="Sources\UIMessageQueue.h" />
+    <ClInclude Include="Sources\UIModal.h" />
+    <ClInclude Include="Sources\UIMultiEditBox.h" />
+    <ClInclude Include="Sources\UIRenderQueue.h" />
+    <ClInclude Include="Sources\UITextUtil.h" />
+    <ClInclude Include="Sources\UIWindow.h" />
+    <ClInclude Include="Sources\UIWindowBody.h" />
+    <ClInclude Include="Sources\UIWindowTitle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicAnimationBox.cpp" />
+    <ClCompile Include="Sources\BasicButton.cpp" />
+    <ClCompile Include="Sources\BasicCarrat.cpp" />
+    <ClCompile Include="Sources\BasicProgressBar.cpp" />
+    <ClCompile Include="Sources\BasicScrollBar.cpp" />
+    <ClCompile Include="Sources\BasicScrollThumb.cpp" />
+    <ClCompile Include="Sources\BasicScrollThumbFrame.cpp" />
+    <ClCompile Include="Sources\BasicScrollThumbFrameUpdate.cpp" />
+    <ClCompile Include="Sources\BasicTextBox.cpp" />
+    <ClCompile Include="Sources\BasicTextBoxSimple.cpp" />
+    <ClCompile Include="Sources\BasicTree.cpp" />
+    <ClCompile Include="Sources\BasicTreeNode.cpp" />
+    <ClCompile Include="Sources\Cursor.cpp" />
+    <ClCompile Include="Sources\GameTextLoader.cpp" />
+    <ClCompile Include="Sources\InterfaceCfg.cpp" />
+    <ClCompile Include="Sources\InterfaceCfgXml.cpp" />
+    <ClCompile Include="Sources\PositionKeeper.cpp" />
+    <ClCompile Include="Sources\RanXML.cpp" />
+    <ClCompile Include="Sources\RanXMLParser.cpp" />
+    <ClCompile Include="Sources\tinyxml.cpp" />
+    <ClCompile Include="Sources\tinyxmlerror.cpp" />
+    <ClCompile Include="Sources\tinyxmlparser.cpp" />
+    <ClCompile Include="Sources\UIControl.cpp" />
+    <ClCompile Include="Sources\UIControlContainer.cpp" />
+    <ClCompile Include="Sources\UIControlDefine.cpp" />
+    <ClCompile Include="Sources\UIControlEx.cpp" />
+    <ClCompile Include="Sources\UIControlMessage.cpp" />
+    <ClCompile Include="Sources\UIControlUpdate.cpp" />
+    <ClCompile Include="Sources\UIDebugSet.cpp" />
+    <ClCompile Include="Sources\UIEditBox.cpp" />
+    <ClCompile Include="Sources\UIEditBoxMan.cpp" />
+    <ClCompile Include="Sources\UIFocusContainer.cpp" />
+    <ClCompile Include="Sources\UIGroup.cpp" />
+    <ClCompile Include="Sources\UIGroupBasic.cpp" />
+    <ClCompile Include="Sources\UIGroupParentFunc.cpp" />
+    <ClCompile Include="Sources\UIKeyCheck.cpp" />
+    <ClCompile Include="Sources\UIMan.cpp" />
+    <ClCompile Include="Sources\UIManBasic.cpp" />
+    <ClCompile Include="Sources\UIMessageQueue.cpp" />
+    <ClCompile Include="Sources\UIModal.cpp" />
+    <ClCompile Include="Sources\UIMultiEditBox.cpp" />
+    <ClCompile Include="Sources\UIRenderQueue.cpp" />
+    <ClCompile Include="Sources\UITextUtil.cpp" />
+    <ClCompile Include="Sources\UIWindow.cpp" />
+    <ClCompile Include="Sources\UIWindowBody.cpp" />
+    <ClCompile Include="Sources\UIWindowTitle.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

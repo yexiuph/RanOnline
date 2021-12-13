@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\DxSound">
+      <UniqueIdentifier>{748bf08f-4176-4dcf-a6af-7107cd4f9788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vorbis codec">
+      <UniqueIdentifier>{b31233cd-5ac9-486e-a41c-b3145dcd7242}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vorbis codec\ogg">
+      <UniqueIdentifier>{a8311509-b706-4ba4-a6c5-0047784b7f30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vorbis codec\vorbis">
+      <UniqueIdentifier>{eba1971b-65e2-4be5-b188-bc7032ae873f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ogg\ogg.h">
+      <Filter>Source Files\vorbis codec\ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ogg\os_types.h">
+      <Filter>Source Files\vorbis codec\ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\vorbis\codec.h">
+      <Filter>Source Files\vorbis codec\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\vorbis\vorbisenc.h">
+      <Filter>Source Files\vorbis codec\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\vorbis\vorbisfile.h">
+      <Filter>Source Files\vorbis codec\vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\DxSound\BgmSound.h">
+      <Filter>Source Files\DxSound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\DxSound\BgmSoundData.h">
+      <Filter>Source Files\DxSound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\DxSound\CharacterSound.h">
+      <Filter>Source Files\DxSound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\DxSound\DxSoundLib.h">
+      <Filter>Source Files\DxSound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\DxSound\DxSoundMan.h">
+      <Filter>Source Files\DxSound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\DxSound\MovableSound.h">
+      <Filter>Source Files\DxSound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\DxSound\StaticSoundMan.h">
+      <Filter>Source Files\DxSound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\DxSound\SuperSound.h">
+      <Filter>Source Files\DxSound</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DxSound\BgmSound.cpp">
+      <Filter>Source Files\DxSound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DxSound\BgmSoundData.cpp">
+      <Filter>Source Files\DxSound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DxSound\BgmSoundEx.cpp">
+      <Filter>Source Files\DxSound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DxSound\CharacterSound.cpp">
+      <Filter>Source Files\DxSound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DxSound\DxSoundLib.cpp">
+      <Filter>Source Files\DxSound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DxSound\DxSoundMan.cpp">
+      <Filter>Source Files\DxSound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DxSound\MovableSound.cpp">
+      <Filter>Source Files\DxSound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DxSound\StaticSoundMan.cpp">
+      <Filter>Source Files\DxSound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DxSound\StaticSoundManEx.cpp">
+      <Filter>Source Files\DxSound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DxSound\SuperSound.cpp">
+      <Filter>Source Files\DxSound</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

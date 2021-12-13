@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_RZ|Win32">
+      <Configuration>Release_RZ</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{1F650903-75F6-43BB-93AD-7A67B2488B01}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>LibEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>Engine</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>Engine</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>EngineD</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalIncludeDirectories>./;./Sources;./Sources/Common;./Sources/DxCommon;./Sources/DxCommon9;./Sources/DxEffect;./Sources/DxLand;./Sources/DxMeshs;./Sources/DxTools;./Sources/G-Logic;./Sources/Hash;./Sources/NaviMesh;./Sources/TextTexture;../[Lib]__EngineSound/Sources;../[Lib]__MfcEx/Sources;../[Lib]__MfcEx/Sources/DaumParam;../[Lib]__MfcEx/Sources/ExLibs;../[Lib]__MfcEx/Sources/RanOnlineLanchClipboard;../Dependency/common;../Dependency/directx</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;RZ_PARAM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalIncludeDirectories>./;./Sources;./Sources/Common;./Sources/DxCommon;./Sources/DxCommon9;./Sources/DxEffect;./Sources/DxLand;./Sources/DxMeshs;./Sources/DxTools;./Sources/G-Logic;./Sources/Hash;./Sources/NaviMesh;./Sources/TextTexture;../[Lib]__EngineSound/Sources;../[Lib]__MfcEx/Sources;../[Lib]__MfcEx/Sources/DaumParam;../[Lib]__MfcEx/Sources/ExLibs;../[Lib]__MfcEx/Sources/RanOnlineLanchClipboard;../Dependency/common;../Dependency/directx</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>./;./Sources;./Sources/Common;./Sources/DxCommon;./Sources/DxCommon9;./Sources/DxEffect;./Sources/DxLand;./Sources/DxMeshs;./Sources/DxTools;./Sources/G-Logic;./Sources/Hash;./Sources/NaviMesh;./Sources/TextTexture;../[Lib]__EngineSound/Sources;../[Lib]__MfcEx/Sources;../[Lib]__MfcEx/Sources/DaumParam;../[Lib]__MfcEx/Sources/ExLibs;../[Lib]__MfcEx/Sources/RanOnlineLanchClipboard;../Dependency/common;../Dependency/directx</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Sources\Common\basestream.h" />
+    <ClInclude Include="Sources\Common\BaseString.h" />
+    <ClInclude Include="Sources\Common\BugTrapStr.h" />
+    <ClInclude Include="Sources\Common\ByteStream.h" />
+    <ClInclude Include="Sources\Common\CFileFind.h" />
+    <ClInclude Include="Sources\Common\charset.h" />
+    <ClInclude Include="Sources\Common\CList.h" />
+    <ClInclude Include="Sources\Common\cmacro.h" />
+    <ClInclude Include="Sources\Common\CMemPool.h" />
+    <ClInclude Include="Sources\Common\CommonWeb.h" />
+    <ClInclude Include="Sources\Common\CompByte.h" />
+    <ClInclude Include="Sources\Common\creportfiles.h" />
+    <ClInclude Include="Sources\Common\DoubleBuffering.h" />
+    <ClInclude Include="Sources\Common\DXInputString.h" />
+    <ClInclude Include="Sources\Common\gassert.h" />
+    <ClInclude Include="Sources\Common\gltexfile.h" />
+    <ClInclude Include="Sources\Common\IMEEdit.h" />
+    <ClInclude Include="Sources\Common\IniLoader.h" />
+    <ClInclude Include="Sources\Common\Method.h" />
+    <ClInclude Include="Sources\Common\profile.h" />
+    <ClInclude Include="Sources\Common\Rijndael.h" />
+    <ClInclude Include="Sources\Common\seqrandom.h" />
+    <ClInclude Include="Sources\Common\SerialFile.h" />
+    <ClInclude Include="Sources\Common\SerialMemory.h" />
+    <ClInclude Include="Sources\Common\SFileSystem.h" />
+    <ClInclude Include="Sources\Common\SHA.H" />
+    <ClInclude Include="Sources\Common\StlFunctions.h" />
+    <ClInclude Include="Sources\Common\StringFile.h" />
+    <ClInclude Include="Sources\Common\StringMemory.h" />
+    <ClInclude Include="Sources\Common\StringUtils.h" />
+    <ClInclude Include="Sources\Common\SUBPATH.h" />
+    <ClInclude Include="Sources\Common\Unzipper.h" />
+    <ClInclude Include="Sources\DxCommon9\dxstdafx.h" />
+    <ClInclude Include="Sources\DxCommon9\DXUT.h" />
+    <ClInclude Include="Sources\DxCommon9\DXUTenum.h" />
+    <ClInclude Include="Sources\DxCommon9\DXUTgui.h" />
+    <ClInclude Include="Sources\DxCommon9\DXUTMesh.h" />
+    <ClInclude Include="Sources\DxCommon9\DXUTmisc.h" />
+    <ClInclude Include="Sources\DxCommon9\getdxver.h" />
+    <ClInclude Include="Sources\DxCommon\d3dapp.h" />
+    <ClInclude Include="Sources\DxCommon\dsutil.h" />
+    <ClInclude Include="Sources\DxCommon\dxutil.h" />
+    <ClInclude Include="Sources\DxCommon\xrmxftmpl.h" />
+    <ClInclude Include="Sources\DxEffect\DxCharAroundEff.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffAni.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffAniFaceOff.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffAniGhosting.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffAniPlayer.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffAniSingle.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffAniTrace.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffChar.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharAlpha.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharAmbient.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharArrow.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharAttribute.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharBlur.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharBoneListEff.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharBonePosEff.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharCloneBlur.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharData.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharDot3.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharDust.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharEmit.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharGhosting.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharHLSL.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharLevel.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharLine2BoneEff.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharMark.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharMultiTex.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharNeon.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharNoAlpha.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharNormal.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharParticle.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharReflection2.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharShock.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharSingle.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharSpecular.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharSpecular2.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharTexDiff.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharToon.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffCharUserColor.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectBlurSys.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectCamera.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectCloth.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectDecal.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectDefine.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectDot3.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectFrame.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectFur.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectGlow.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectGrass.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectGround.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectLighting.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectLightMap.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectMan.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectMesh.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectMoveRotate.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectMoveTarget.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectMultiTex.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectNature.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectNeon.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectParticleSys.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectPointLight.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectRainDrop.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectReflect.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectRender.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectRenderState.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectRiver.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectSequence.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectShadow.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectShadowLow.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectSingleType.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectSkinMesh.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectSpecReflect.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectSpecular.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectSpecular2.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectSpore.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectTiling.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectToon.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectWater.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectWater2.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectWaterLight.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffectWave.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffGroupPlayer.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffKeep.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffKeepCTColor.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffKeepCTEdge.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffKeepCTShade.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffKeepPlayer.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffMemPool.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffProj.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffProjGetItem.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffProjSpeed.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffSingle.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffSingleMan.h" />
+    <ClInclude Include="Sources\DxEffect\DxEffSinglePropGMan.h" />
+    <ClInclude Include="Sources\DxEffect\DxFrameAni.h" />
+    <ClInclude Include="Sources\DxEffect\DxFrameAniMan.h" />
+    <ClInclude Include="Sources\DxEffect\DxLoadShader.h" />
+    <ClInclude Include="Sources\DxEffect\DxMapBlend.h" />
+    <ClInclude Include="Sources\DxEffect\DxMapEditMan.h" />
+    <ClInclude Include="Sources\DxEffect\DxPiece.h" />
+    <ClInclude Include="Sources\DxEffect\DxPieceContainer.h" />
+    <ClInclude Include="Sources\DxEffect\DxPieceEff.h" />
+    <ClInclude Include="Sources\DxEffect\DxPieceEffMan.h" />
+    <ClInclude Include="Sources\DxEffect\DxPieceManager.h" />
+    <ClInclude Include="Sources\DxEffect\DxPieceMorph.h" />
+    <ClInclude Include="Sources\DxEffect\DxPieceStaticAni.h" />
+    <ClInclude Include="Sources\DxEffect\DxPieceTexEff.h" />
+    <ClInclude Include="Sources\DxEffect\DxStaticMesh.h" />
+    <ClInclude Include="Sources\DxEffect\DxStaticMeshThread.h" />
+    <ClInclude Include="Sources\DxEffect\DxStaticPisMan.h" />
+    <ClInclude Include="Sources\DxEffect\DxTexEff.h" />
+    <ClInclude Include="Sources\DxEffect\DxTexEffDiffuse.h" />
+    <ClInclude Include="Sources\DxEffect\DxTexEffFlowUV.h" />
+    <ClInclude Include="Sources\DxEffect\DxTexEffMan.h" />
+    <ClInclude Include="Sources\DxEffect\DxTexEffRotate.h" />
+    <ClInclude Include="Sources\DxEffect\DxTexEffSpecular.h" />
+    <ClInclude Include="Sources\DxEffect\DxTextureEff.h" />
+    <ClInclude Include="Sources\DxEffect\DxTextureEffMan.h" />
+    <ClInclude Include="Sources\DxEffect\ShaderConstant.h" />
+    <ClInclude Include="Sources\DxEffect\TextureSetDXT.h" />
+    <ClInclude Include="Sources\DxLand\CollisionContainer.h" />
+    <ClInclude Include="Sources\DxLand\CollisionMap.h" />
+    <ClInclude Include="Sources\DxLand\CollisionMapCell.h" />
+    <ClInclude Include="Sources\DxLand\DxLandDef.h" />
+    <ClInclude Include="Sources\DxLand\DXLANDEFF.h" />
+    <ClInclude Include="Sources\DxLand\DxLandGateMan.h" />
+    <ClInclude Include="Sources\DxLand\DxLandMan.h" />
+    <ClInclude Include="Sources\DxLand\DXLANDSKINOBJ.h" />
+    <ClInclude Include="Sources\DxLand\DxOctree.h" />
+    <ClInclude Include="Sources\DxLand\DxOctreeMesh.h" />
+    <ClInclude Include="Sources\DxLand\DxSetLandMan.h" />
+    <ClInclude Include="Sources\DxMeshs\DxAniBoneScale.h" />
+    <ClInclude Include="Sources\DxMeshs\DxAniKeys.h" />
+    <ClInclude Include="Sources\DxMeshs\DxAnimationManager.h" />
+    <ClInclude Include="Sources\DxMeshs\DxBoneCollector.h" />
+    <ClInclude Include="Sources\DxMeshs\DxCharPart.h" />
+    <ClInclude Include="Sources\DxMeshs\DxDecal.h" />
+    <ClInclude Include="Sources\DxMeshs\DxFrameMesh.h" />
+    <ClInclude Include="Sources\DxMeshs\DxMaterial.h" />
+    <ClInclude Include="Sources\DxMeshs\DxMaterialHLSL.h" />
+    <ClInclude Include="Sources\DxMeshs\DxPieceDefine.h" />
+    <ClInclude Include="Sources\DxMeshs\DxReplaceContainer.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSimpleMeshMan.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinAniControl.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinAniMan.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinChar.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinCharData.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinDataDummy.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinDefine.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinEffResult.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinMesh9.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinMesh9_CPU.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinMesh9_HLSL.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinMesh9_NORMAL.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinMeshContainer9.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinMeshMan.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinObject.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinPieceContainer.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSkinVB_ATT.h" />
+    <ClInclude Include="Sources\DxMeshs\DxSMeshDATA.h" />
+    <ClInclude Include="Sources\DxMeshs\NsSMeshSceneGraph.h" />
+    <ClInclude Include="Sources\DxMeshs\SAnimation.h" />
+    <ClInclude Include="Sources\DxResponseMan.h" />
+    <ClInclude Include="Sources\DxTools\Collision.h" />
+    <ClInclude Include="Sources\DxTools\d3dfont.h" />
+    <ClInclude Include="Sources\DxTools\D3DFontX.h" />
+    <ClInclude Include="Sources\DxTools\DebugSet.h" />
+    <ClInclude Include="Sources\DxTools\DxBackUpRendTarget.h" />
+    <ClInclude Include="Sources\DxTools\DxCamAniMan.h" />
+    <ClInclude Include="Sources\DxTools\DxClubMan.h" />
+    <ClInclude Include="Sources\DxTools\DxCubeMap.h" />
+    <ClInclude Include="Sources\DxTools\DxCursor.h" />
+    <ClInclude Include="Sources\DxTools\DxCustomTypes.h" />
+    <ClInclude Include="Sources\DxTools\DxDamper.h" />
+    <ClInclude Include="Sources\DxTools\DxDynamicVB.h" />
+    <ClInclude Include="Sources\DxTools\DxEditBox.h" />
+    <ClInclude Include="Sources\DxTools\DxEditMat.h" />
+    <ClInclude Include="Sources\DxTools\DxEffToTexMan.h" />
+    <ClInclude Include="Sources\DxTools\DxEnvironment.h" />
+    <ClInclude Include="Sources\DxTools\DxFogMan.h" />
+    <ClInclude Include="Sources\DxTools\DxFontMan.h" />
+    <ClInclude Include="Sources\DxTools\DxGlowMan.h" />
+    <ClInclude Include="Sources\DxTools\DxGrapUtils.h" />
+    <ClInclude Include="Sources\DxTools\DxInputDevice.h" />
+    <ClInclude Include="Sources\DxTools\DxLightMan.h" />
+    <ClInclude Include="Sources\DxTools\DxMeshTexMan.h" />
+    <ClInclude Include="Sources\DxTools\DxMethods.h" />
+    <ClInclude Include="Sources\DxTools\DxObject.h" />
+    <ClInclude Include="Sources\DxTools\DxObjectMRS.h" />
+    <ClInclude Include="Sources\DxTools\DxPhysical.h" />
+    <ClInclude Include="Sources\DxTools\DxPostProcess.h" />
+    <ClInclude Include="Sources\DxTools\DxQUADTree.h" />
+    <ClInclude Include="Sources\DxTools\DxRenderStates.h" />
+    <ClInclude Include="Sources\DxTools\DxSequenceUV.h" />
+    <ClInclude Include="Sources\DxTools\DxShadowMap.h" />
+    <ClInclude Include="Sources\DxTools\DxSkyBase.h" />
+    <ClInclude Include="Sources\DxTools\DxSkyCloud.h" />
+    <ClInclude Include="Sources\DxTools\DxSkyMan.h" />
+    <ClInclude Include="Sources\DxTools\DxSpring.h" />
+    <ClInclude Include="Sources\DxTools\DxSurfaceTex.h" />
+    <ClInclude Include="Sources\DxTools\DxVertexFVF.h" />
+    <ClInclude Include="Sources\DxTools\DxViewPort.h" />
+    <ClInclude Include="Sources\DxTools\DxWeatherMan.h" />
+    <ClInclude Include="Sources\DxTools\DxWind.h" />
+    <ClInclude Include="Sources\DxTools\EditMeshs.h" />
+    <ClInclude Include="Sources\DxTools\EncryptTextureDef.h" />
+    <ClInclude Include="Sources\DxTools\GammaControl.h" />
+    <ClInclude Include="Sources\DxTools\MatrixDecompose.h" />
+    <ClInclude Include="Sources\DxTools\MemoryTexture.h" />
+    <ClInclude Include="Sources\DxTools\NsCollisionMap.h" />
+    <ClInclude Include="Sources\DxTools\NsOCTree.h" />
+    <ClInclude Include="Sources\DxTools\NsOptimizeMesh.h" />
+    <ClInclude Include="Sources\DxTools\RENDERPARAM.h" />
+    <ClInclude Include="Sources\DxTools\ScanCode.h" />
+    <ClInclude Include="Sources\DxTools\TextureManager.h" />
+    <ClInclude Include="Sources\G-Logic\DxConsoleMsg.h" />
+    <ClInclude Include="Sources\G-Logic\DxMsgProcessor.h" />
+    <ClInclude Include="Sources\G-Logic\DxMsgServer.h" />
+    <ClInclude Include="Sources\G-Logic\GLActiveMap.h" />
+    <ClInclude Include="Sources\G-Logic\GLCrowTracer.h" />
+    <ClInclude Include="Sources\G-Logic\GLDBMan.h" />
+    <ClInclude Include="Sources\G-Logic\GLDefine.h" />
+    <ClInclude Include="Sources\G-Logic\GLList.h" />
+    <ClInclude Include="Sources\G-Logic\GLogic.h" />
+    <ClInclude Include="Sources\G-Logic\GLPeriod.h" />
+    <ClInclude Include="Sources\G-Logic\GLQuadTree.h" />
+    <ClInclude Include="Sources\Hash\CHash.h" />
+    <ClInclude Include="Sources\Hash\CRC32.h" />
+    <ClInclude Include="Sources\Hash\gosthash.h" />
+    <ClInclude Include="Sources\Hash\HashCommon.h" />
+    <ClInclude Include="Sources\Hash\md2.h" />
+    <ClInclude Include="Sources\Hash\md4.h" />
+    <ClInclude Include="Sources\Hash\md5.h" />
+    <ClInclude Include="Sources\Hash\sha1.h" />
+    <ClInclude Include="Sources\Hash\sha2.h" />
+    <ClInclude Include="Sources\NaviMesh\actor.h" />
+    <ClInclude Include="Sources\NaviMesh\line2d.h" />
+    <ClInclude Include="Sources\NaviMesh\navigationcell.h" />
+    <ClInclude Include="Sources\NaviMesh\navigationheap.h" />
+    <ClInclude Include="Sources\NaviMesh\navigationmesh.h" />
+    <ClInclude Include="Sources\NaviMesh\navigationpath.h" />
+    <ClInclude Include="Sources\NaviMesh\Navigations.h" />
+    <ClInclude Include="Sources\NaviMesh\plane.h" />
+    <ClInclude Include="Sources\TextTexture\TextColor.h" />
+    <ClInclude Include="Sources\TextTexture\TextGroup.h" />
+    <ClInclude Include="Sources\TextTexture\TextNode.h" />
+    <ClInclude Include="Sources\TextTexture\TextObject.h" />
+    <ClInclude Include="Sources\TextTexture\TextTexture.h" />
+    <ClInclude Include="Sources\TextTexture\TextTexture16.h" />
+    <ClInclude Include="Sources\TextTexture\TextTexture32.h" />
+    <ClInclude Include="Sources\TextTexture\TextUtil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Sources\Common\BaseString.cpp" />
+    <ClCompile Include="Sources\Common\BugTrapStr.cpp" />
+    <ClCompile Include="Sources\Common\ByteStream.cpp" />
+    <ClCompile Include="Sources\Common\CFileFind.cpp" />
+    <ClCompile Include="Sources\Common\charset.cpp" />
+    <ClCompile Include="Sources\Common\CommonWeb.cpp" />
+    <ClCompile Include="Sources\Common\CompByte.cpp" />
+    <ClCompile Include="Sources\Common\creportfiles.cpp" />
+    <ClCompile Include="Sources\Common\DoubleBuffering.cpp" />
+    <ClCompile Include="Sources\Common\DXInputString.cpp" />
+    <ClCompile Include="Sources\Common\gassert.cpp" />
+    <ClCompile Include="Sources\Common\gltexfile.cpp" />
+    <ClCompile Include="Sources\Common\IMEEdit.cpp" />
+    <ClCompile Include="Sources\Common\IniLoader.cpp" />
+    <ClCompile Include="Sources\Common\Method.cpp" />
+    <ClCompile Include="Sources\Common\profile.cpp" />
+    <ClCompile Include="Sources\Common\Rijndael.cpp" />
+    <ClCompile Include="Sources\Common\seqrandom.cpp" />
+    <ClCompile Include="Sources\Common\SerialFile.cpp" />
+    <ClCompile Include="Sources\Common\SerialMemory.cpp" />
+    <ClCompile Include="Sources\Common\SFileSystem.cpp" />
+    <ClCompile Include="Sources\Common\SHA.CPP" />
+    <ClCompile Include="Sources\Common\StringFile.cpp" />
+    <ClCompile Include="Sources\Common\StringMemory.cpp" />
+    <ClCompile Include="Sources\Common\StringUtils.cpp" />
+    <ClCompile Include="Sources\Common\SUBPATH.cpp" />
+    <ClCompile Include="Sources\Common\Unzipper.cpp" />
+    <ClCompile Include="Sources\DxCommon9\dxstdafx.cpp" />
+    <ClCompile Include="Sources\DxCommon9\DXUT.cpp" />
+    <ClCompile Include="Sources\DxCommon9\DXUTenum.cpp" />
+    <ClCompile Include="Sources\DxCommon9\DXUTgui.cpp" />
+    <ClCompile Include="Sources\DxCommon9\DXUTMesh.cpp" />
+    <ClCompile Include="Sources\DxCommon9\DXUTmisc.cpp" />
+    <ClCompile Include="Sources\DxCommon9\getdxver.cpp" />
+    <ClCompile Include="Sources\DxCommon\d3dapp.cpp" />
+    <ClCompile Include="Sources\DxCommon\dsutil.cpp" />
+    <ClCompile Include="Sources\DxCommon\dxutil.cpp" />
+    <ClCompile Include="Sources\DxCommon\xrmxftmpl.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxCharAroundEff.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffAni.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffAniFaceOff.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffAniGhosting.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffAniPlayer.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffAniSingle.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffAniTrace.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffChar.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharAlpha.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharAmbient.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharArrow.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharAttribute.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharBlur.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharBoneListEff.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharBonePosEff.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharCloneBlur.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharData.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharDot3.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharDust.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharEmit.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharGhosting.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharHLSL.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharLevel.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharLine2BoneEff.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharMark.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharMultiTex.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharNeon.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharNoAlpha.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharNormal.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharParticle.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharReflection2.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharShock.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharSingle.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharSpecular.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharSpecular2.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharTexDiff.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharToon.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffCharUserColor.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectBlurSys.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectCamera.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectCloth.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectDecal.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectDot3.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectFrameSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectFrameSetSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectFur.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectGlow.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectGrass.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectGround.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectLighting.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectLightMap.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectMan.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectMesh.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectMeshPROP.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectMoveRotate.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectMoveTarget.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectMultiTex.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectNature.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectNeon.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectParticleSys.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectParticleSysDraw.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectParticleSysPROP.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectParticleSysVer.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectPointLight.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectRainDrop.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectRainDropEx.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectRainDropFireFly.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectReflect.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectReflectEX.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectRenderState.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectRiver.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectRiverDraw.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectRiverEX.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectRiverRainDrop.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectSequence.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectShadow.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectShadowDraw.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectShadowEX.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectShadowLow.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectShadowLowDraw.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectShadowStatic.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectSkinMesh.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectSpecReflect.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectSpecular.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectSpecular2.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectSpore.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectTiling.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectTilingEX.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectTilingSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectToon.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectWater.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectWater2.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectWaterLight.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffectWave.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffGroupPlayer.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffKeep.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffKeepCTColor.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffKeepCTEdge.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffKeepCTShade.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffKeepPlayer.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffMemPool.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffProj.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffProjGetItem.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffProjSpeed.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffSingle.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffSingleMan.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxEffSinglePropGMan.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxFrameAni.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxFrameAniMan.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxLoadShader.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxMapBlend.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxMapBlendSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxMapEditMan.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxMapEditManEx.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxMapEditManGrid.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxMapEditManHeight.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxMapEditManSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxMapEditManThread.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxMapEditManTile.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxPiece.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxPieceContainer.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxPieceEff.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxPieceEffMan.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxPieceManager.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxPieceMorph.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxPieceStaticAni.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxPieceTexEff.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxShaderBump.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxShaderDefault.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxShaderDot3.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxShaderFur.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxShaderRain.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxShaderReflect.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxShaderReflection.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxShaderShadow.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxShaderSpecular.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxShaderStreamSource.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxShaderToon.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxStaticMesh.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxStaticMeshThread.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxStaticPisMan.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxStaticPisManEX.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxStaticPisManThread.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxTexEff.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxTexEffDiffuse.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxTexEffFlowUV.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxTexEffMan.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxTexEffRotate.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxTexEffSpecular.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxTextureEff.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxTextureEffDraw.cpp" />
+    <ClCompile Include="Sources\DxEffect\DxTextureEffMan.cpp" />
+    <ClCompile Include="Sources\DxEffect\PossasiHLSL.cpp" />
+    <ClCompile Include="Sources\DxEffect\TextureSetDXT.cpp" />
+    <ClCompile Include="Sources\DxLand\CollisionContainer.cpp" />
+    <ClCompile Include="Sources\DxLand\CollisionMap.cpp" />
+    <ClCompile Include="Sources\DxLand\CollisionMapCell.cpp" />
+    <ClCompile Include="Sources\DxLand\CollisionMapTree.cpp" />
+    <ClCompile Include="Sources\DxLand\DxLandDef.cpp" />
+    <ClCompile Include="Sources\DxLand\DXLANDEFF.cpp" />
+    <ClCompile Include="Sources\DxLand\DxLandGateMan.cpp" />
+    <ClCompile Include="Sources\DxLand\DxLandMan.cpp" />
+    <ClCompile Include="Sources\DxLand\DxLandManSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxLand\DXLANDSKINOBJ.cpp" />
+    <ClCompile Include="Sources\DxLand\DxOctree.cpp" />
+    <ClCompile Include="Sources\DxLand\DxOctreeBoxCreate.cpp" />
+    <ClCompile Include="Sources\DxLand\DxOctreeBoxRegion.cpp" />
+    <ClCompile Include="Sources\DxLand\DxOctreeCollision.cpp" />
+    <ClCompile Include="Sources\DxLand\DxOctreeMesh.cpp" />
+    <ClCompile Include="Sources\DxLand\DxOctreeMeshSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxLand\DxOctreeSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxLand\DxSetLandMan.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxAniBoneScale.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxAnimationManager.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxAnimationManagerSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxAnimationManagerSetSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxAnimationSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxBoneCollector.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxCharPart.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxDecal.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxFrameMesh.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxFrameMeshCollision.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxFrameMeshDraw.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxFrameMeshExtr.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxFrameMeshMethod.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxFrameMeshSetSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxFrameMeshToOctree.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxFrameSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxMaterial.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxMaterialHLSL.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxMeshesSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxReplaceContainer.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxReplaceContainerSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxReplaceContainerSetSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSimpleMeshMan.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinAniControl.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinAniMan.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinAniManSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinAniManThread.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinChar.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinCharData.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinDataDummy.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinMesh9.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinMesh9_CPU.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinMesh9_HLSL.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinMesh9_NORMAL.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinMeshCartoon.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinMeshContainer9.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinMeshDraw9.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinMeshLoad9.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinMeshMan.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinObject.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinPieceContainer.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSkinVB_ATT.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSMeshContainerLoad.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSMeshContainerLOD.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSMeshContainerToon.cpp" />
+    <ClCompile Include="Sources\DxMeshs\DxSMeshDATA.cpp" />
+    <ClCompile Include="Sources\DxMeshs\NsSMeshSceneGraph.cpp" />
+    <ClCompile Include="Sources\DxMeshs\SAnimation.cpp" />
+    <ClCompile Include="Sources\DxResponseMan.cpp" />
+    <ClCompile Include="Sources\DxTools\Collision.cpp" />
+    <ClCompile Include="Sources\DxTools\CollisionAABBTree.cpp" />
+    <ClCompile Include="Sources\DxTools\d3dfont.cpp" />
+    <ClCompile Include="Sources\DxTools\D3DFontX.cpp" />
+    <ClCompile Include="Sources\DxTools\DebugSet.cpp" />
+    <ClCompile Include="Sources\DxTools\DxBackUpRendTarget.cpp" />
+    <ClCompile Include="Sources\DxTools\DxCamAniMan.cpp" />
+    <ClCompile Include="Sources\DxTools\DxClubMan.cpp" />
+    <ClCompile Include="Sources\DxTools\DxCubeMap.cpp" />
+    <ClCompile Include="Sources\DxTools\DxCursor.cpp" />
+    <ClCompile Include="Sources\DxTools\DxCustomTypes.cpp" />
+    <ClCompile Include="Sources\DxTools\DxDynamicVB.cpp" />
+    <ClCompile Include="Sources\DxTools\DxEditBox.cpp" />
+    <ClCompile Include="Sources\DxTools\DxEditMat.cpp" />
+    <ClCompile Include="Sources\DxTools\DxEffToTexMan.cpp" />
+    <ClCompile Include="Sources\DxTools\DxEnvironment.cpp" />
+    <ClCompile Include="Sources\DxTools\DxFogMan.cpp" />
+    <ClCompile Include="Sources\DxTools\DxFontMan.cpp" />
+    <ClCompile Include="Sources\DxTools\DxGlowMan.cpp" />
+    <ClCompile Include="Sources\DxTools\DxGrapUtils.cpp" />
+    <ClCompile Include="Sources\DxTools\DxInputDevice.cpp" />
+    <ClCompile Include="Sources\DxTools\DxLightMan.cpp" />
+    <ClCompile Include="Sources\DxTools\DxLightManSetSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxTools\DxMeshTexMan.cpp" />
+    <ClCompile Include="Sources\DxTools\DxMethods.cpp" />
+    <ClCompile Include="Sources\DxTools\DxObjectMRS.cpp" />
+    <ClCompile Include="Sources\DxTools\DxObjectMRS_MOVE.cpp" />
+    <ClCompile Include="Sources\DxTools\DxObjectMRS_ROTATE.cpp" />
+    <ClCompile Include="Sources\DxTools\DxObjectMRS_SCALE.cpp" />
+    <ClCompile Include="Sources\DxTools\DxPhysical.cpp" />
+    <ClCompile Include="Sources\DxTools\DxPostProcess.cpp" />
+    <ClCompile Include="Sources\DxTools\DxQUADTree.cpp" />
+    <ClCompile Include="Sources\DxTools\DxRenderStates.cpp" />
+    <ClCompile Include="Sources\DxTools\DxSequenceUV.cpp" />
+    <ClCompile Include="Sources\DxTools\DxShadowMap.cpp" />
+    <ClCompile Include="Sources\DxTools\DxSkyBase.cpp" />
+    <ClCompile Include="Sources\DxTools\DxSkyCloud.cpp" />
+    <ClCompile Include="Sources\DxTools\DxSkyMan.cpp" />
+    <ClCompile Include="Sources\DxTools\DxSkyManDayNight.cpp" />
+    <ClCompile Include="Sources\DxTools\DxSkyManEtc.cpp" />
+    <ClCompile Include="Sources\DxTools\DxSkyManEx.cpp" />
+    <ClCompile Include="Sources\DxTools\DxSurfaceTex.cpp" />
+    <ClCompile Include="Sources\DxTools\DxViewPort.cpp" />
+    <ClCompile Include="Sources\DxTools\DxViewPortSetCamera.cpp" />
+    <ClCompile Include="Sources\DxTools\DxWeatherMan.cpp" />
+    <ClCompile Include="Sources\DxTools\DxWeatherManEx.cpp" />
+    <ClCompile Include="Sources\DxTools\DxWeatherManSnow.cpp" />
+    <ClCompile Include="Sources\DxTools\EditMeshs.cpp" />
+    <ClCompile Include="Sources\DxTools\GammaControl.cpp" />
+    <ClCompile Include="Sources\DxTools\MatrixDecompose.cpp" />
+    <ClCompile Include="Sources\DxTools\MemoryTexture.cpp" />
+    <ClCompile Include="Sources\DxTools\NsCollisionMap.cpp" />
+    <ClCompile Include="Sources\DxTools\NsOCTree.cpp" />
+    <ClCompile Include="Sources\DxTools\NsOCTreeSaveLoad.cpp" />
+    <ClCompile Include="Sources\DxTools\NsOptimizeMesh.cpp" />
+    <ClCompile Include="Sources\DxTools\RENDERPARAM.cpp" />
+    <ClCompile Include="Sources\DxTools\TextureManager.cpp" />
+    <ClCompile Include="Sources\G-Logic\GLDefine.cpp" />
+    <ClCompile Include="Sources\G-Logic\GLogic.cpp" />
+    <ClCompile Include="Sources\G-Logic\GLPeriod.cpp" />
+    <ClCompile Include="Sources\G-Logic\GLQuadTree.cpp" />
+    <ClCompile Include="Sources\Hash\CHash.cpp" />
+    <ClCompile Include="Sources\Hash\CRC32.cpp" />
+    <ClCompile Include="Sources\Hash\gosthash.cpp" />
+    <ClCompile Include="Sources\Hash\md2.cpp" />
+    <ClCompile Include="Sources\Hash\md4.cpp" />
+    <ClCompile Include="Sources\Hash\md5.cpp" />
+    <ClCompile Include="Sources\Hash\sha1.cpp" />
+    <ClCompile Include="Sources\Hash\sha2.cpp" />
+    <ClCompile Include="Sources\NaviMesh\actor.cpp" />
+    <ClCompile Include="Sources\NaviMesh\navagationtree.cpp" />
+    <ClCompile Include="Sources\NaviMesh\navigationcell.cpp" />
+    <ClCompile Include="Sources\NaviMesh\navigationmesh.cpp" />
+    <ClCompile Include="Sources\NaviMesh\Navigations.cpp" />
+    <ClCompile Include="Sources\NaviMesh\NavigationSaveLoad.cpp" />
+    <ClCompile Include="Sources\TextTexture\TextColor.cpp" />
+    <ClCompile Include="Sources\TextTexture\TextGroup.cpp" />
+    <ClCompile Include="Sources\TextTexture\TextNode.cpp" />
+    <ClCompile Include="Sources\TextTexture\TextObject.cpp" />
+    <ClCompile Include="Sources\TextTexture\TextTexture.cpp" />
+    <ClCompile Include="Sources\TextTexture\TextTexture16.cpp" />
+    <ClCompile Include="Sources\TextTexture\TextTexture32.cpp" />
+    <ClCompile Include="Sources\TextTexture\TextUtil.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

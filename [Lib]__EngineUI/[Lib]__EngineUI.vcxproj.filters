@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\GUInterface">
+      <UniqueIdentifier>{c95b72f7-123f-4020-8d38-b9de578a5dd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUInterface\BasicControl">
+      <UniqueIdentifier>{cb3edeab-c1c1-467b-83a4-ed32928c659e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUInterface\BasicType">
+      <UniqueIdentifier>{b6e42ab9-3592-418f-9085-ae16ec95e87a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUInterface\ConfigFileLoader">
+      <UniqueIdentifier>{5001504b-5003-4430-8ee0-1e78fd7b83db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUInterface\ControlNode">
+      <UniqueIdentifier>{9ab920f3-f796-4f0b-bc2b-4db2bd195081}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUInterface\GroupControl">
+      <UniqueIdentifier>{81e6301e-7791-49ad-9276-04bcacab0fc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUInterface\SingleControl">
+      <UniqueIdentifier>{bf6ce981-1a4b-46fe-b8c2-319e71c10224}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\BasicAnimationBox.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\BasicButton.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\BasicCarrat.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\BasicProgressBar.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\BasicScrollBar.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\BasicScrollThumb.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\BasicScrollThumbFrame.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\BasicTextBox.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\BasicTree.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\BasicTreeNode.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Cursor.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIEditBox.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIEditBoxMan.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIModal.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIMultiEditBox.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UITextUtil.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIWindow.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIWindowBody.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIWindowTitle.h">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIControlDefine.h">
+      <Filter>Source Files\GUInterface\BasicType</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIControlMessage.h">
+      <Filter>Source Files\GUInterface\BasicType</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIDataType.h">
+      <Filter>Source Files\GUInterface\BasicType</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameTextLoader.h">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InterfaceCfg.h">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InterfaceCfgXml.h">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\RanXML.h">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\RanXMLParser.h">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\tinyxml.h">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIControlContainer.h">
+      <Filter>Source Files\GUInterface\ControlNode</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIFocusContainer.h">
+      <Filter>Source Files\GUInterface\ControlNode</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIMessageQueue.h">
+      <Filter>Source Files\GUInterface\ControlNode</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIGroup.h">
+      <Filter>Source Files\GUInterface\GroupControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIControl.h">
+      <Filter>Source Files\GUInterface\SingleControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\PositionKeeper.h">
+      <Filter>Source Files\GUInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIDebugSet.h">
+      <Filter>Source Files\GUInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIKeyCheck.h">
+      <Filter>Source Files\GUInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIMan.h">
+      <Filter>Source Files\GUInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\UIRenderQueue.h">
+      <Filter>Source Files\GUInterface</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicAnimationBox.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicButton.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicCarrat.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicProgressBar.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicScrollBar.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicScrollThumb.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicScrollThumbFrame.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicScrollThumbFrameUpdate.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicTextBox.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicTextBoxSimple.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicTree.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicTreeNode.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Cursor.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIEditBox.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIEditBoxMan.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIModal.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIMultiEditBox.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UITextUtil.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIWindow.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIWindowBody.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIWindowTitle.cpp">
+      <Filter>Source Files\GUInterface\BasicControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIControlDefine.cpp">
+      <Filter>Source Files\GUInterface\BasicType</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIControlMessage.cpp">
+      <Filter>Source Files\GUInterface\BasicType</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameTextLoader.cpp">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InterfaceCfg.cpp">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InterfaceCfgXml.cpp">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\RanXML.cpp">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\RanXMLParser.cpp">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\tinyxml.cpp">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\tinyxmlerror.cpp">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\tinyxmlparser.cpp">
+      <Filter>Source Files\GUInterface\ConfigFileLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIControlContainer.cpp">
+      <Filter>Source Files\GUInterface\ControlNode</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIFocusContainer.cpp">
+      <Filter>Source Files\GUInterface\ControlNode</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIMessageQueue.cpp">
+      <Filter>Source Files\GUInterface\ControlNode</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIGroup.cpp">
+      <Filter>Source Files\GUInterface\GroupControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIGroupBasic.cpp">
+      <Filter>Source Files\GUInterface\GroupControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIGroupParentFunc.cpp">
+      <Filter>Source Files\GUInterface\GroupControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIControl.cpp">
+      <Filter>Source Files\GUInterface\SingleControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIControlEx.cpp">
+      <Filter>Source Files\GUInterface\SingleControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIControlUpdate.cpp">
+      <Filter>Source Files\GUInterface\SingleControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\PositionKeeper.cpp">
+      <Filter>Source Files\GUInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIDebugSet.cpp">
+      <Filter>Source Files\GUInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIKeyCheck.cpp">
+      <Filter>Source Files\GUInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIMan.cpp">
+      <Filter>Source Files\GUInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIManBasic.cpp">
+      <Filter>Source Files\GUInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\UIRenderQueue.cpp">
+      <Filter>Source Files\GUInterface</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

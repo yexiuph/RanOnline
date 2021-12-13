@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_RZ|Win32">
+      <Configuration>Release_RZ</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{523C5638-06A5-4A16-A05E-60A47A0F7CF9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>LibNetServer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>NetServer</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>NetServer</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>NetServerD</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalIncludeDirectories>./;./Sources;../[Lib]__Engine;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxEffect;../[Lib]__Engine/Sources/DxLand;../[Lib]__Engine/Sources/DxMeshs;../[Lib]__Engine/Sources/DxTools;../[Lib]__Engine/Sources/G-Logic;../[Lib]__MfcEx/Sources;../[Lib]__MfcEx/Sources/ExLibs;../[Lib]__NetClient/Sources;../[Lib]__RanClient;../[Lib]__RanClient/Sources;../[Lib]__RanClient/Sources/DbAction;../[Lib]__RanClient/Sources/G-Logic;../[Lib]__RanClient/Sources/G-Logic/Client;../[Lib]__RanClient/Sources/G-Logic/Data;../[Lib]__RanClient/Sources/G-Logic/GLMsg;../[Lib]__RanClient/Sources/G-Logic/Npc;../[Lib]__RanClient/Sources/G-Logic/Quest;../[Lib]__RanClient/Sources/G-Logic/Server;../Dependency/common;../Dependency/directx;../Dependency/lzo;../Dependency/NetGlobal;../Dependency/tbblib/Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;RZ_PARAM;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalIncludeDirectories>./;./Sources;../[Lib]__Engine;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxEffect;../[Lib]__Engine/Sources/DxLand;../[Lib]__Engine/Sources/DxMeshs;../[Lib]__Engine/Sources/DxTools;../[Lib]__Engine/Sources/G-Logic;../[Lib]__MfcEx/Sources;../[Lib]__MfcEx/Sources/ExLibs;../[Lib]__NetClient/Sources;../[Lib]__RanClient;../[Lib]__RanClient/Sources;../[Lib]__RanClient/Sources/DbAction;../[Lib]__RanClient/Sources/G-Logic;../[Lib]__RanClient/Sources/G-Logic/Client;../[Lib]__RanClient/Sources/G-Logic/Data;../[Lib]__RanClient/Sources/G-Logic/GLMsg;../[Lib]__RanClient/Sources/G-Logic/Npc;../[Lib]__RanClient/Sources/G-Logic/Quest;../[Lib]__RanClient/Sources/G-Logic/Server;../Dependency/common;../Dependency/directx;../Dependency/lzo;../Dependency/NetGlobal;../Dependency/tbblib/Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>./;./Sources;../[Lib]__Engine;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxEffect;../[Lib]__Engine/Sources/DxLand;../[Lib]__Engine/Sources/DxMeshs;../[Lib]__Engine/Sources/DxTools;../[Lib]__Engine/Sources/G-Logic;../[Lib]__MfcEx/Sources;../[Lib]__MfcEx/Sources/ExLibs;../[Lib]__NetClient/Sources;../[Lib]__RanClient;../[Lib]__RanClient/Sources;../[Lib]__RanClient/Sources/DbAction;../[Lib]__RanClient/Sources/G-Logic;../[Lib]__RanClient/Sources/G-Logic/Client;../[Lib]__RanClient/Sources/G-Logic/Data;../[Lib]__RanClient/Sources/G-Logic/GLMsg;../[Lib]__RanClient/Sources/G-Logic/Npc;../[Lib]__RanClient/Sources/G-Logic/Quest;../[Lib]__RanClient/Sources/G-Logic/Server;../Dependency/common;../Dependency/directx;../Dependency/lzo;../Dependency/NetGlobal;../Dependency/tbblib/Include</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Dependency\NetGlobal\minTea.h" />
+    <ClInclude Include="..\Dependency\NetGlobal\s_CBit.h" />
+    <ClInclude Include="..\Dependency\NetGlobal\s_NetGlobal.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Sources\ApexCloseList.h" />
+    <ClInclude Include="Sources\ApexProxy.h" />
+    <ClInclude Include="Sources\DaumGameAuth.h" />
+    <ClInclude Include="Sources\DaumGameCrypt.h" />
+    <ClInclude Include="Sources\ggsrv.h" />
+    <ClInclude Include="Sources\SendMsgBuffer.h" />
+    <ClInclude Include="Sources\s_CAddressChecker.h" />
+    <ClInclude Include="Sources\s_CAgentServer.h" />
+    <ClInclude Include="Sources\s_CAgentServerApex.h" />
+    <ClInclude Include="Sources\s_CCfg.h" />
+    <ClInclude Include="Sources\s_CClientAgent.h" />
+    <ClInclude Include="Sources\s_CClientField.h" />
+    <ClInclude Include="Sources\s_CClientLogin.h" />
+    <ClInclude Include="Sources\s_CClientManager.h" />
+    <ClInclude Include="Sources\s_CClientSession.h" />
+    <ClInclude Include="Sources\s_CConsoleMessage.h" />
+    <ClInclude Include="Sources\s_CCsvFile.h" />
+    <ClInclude Include="Sources\s_CDbAction.h" />
+    <ClInclude Include="Sources\s_CFieldServer.h" />
+    <ClInclude Include="Sources\s_CLock.h" />
+    <ClInclude Include="Sources\s_CLoginServer.h" />
+    <ClInclude Include="Sources\s_CLogSystem.h" />
+    <ClInclude Include="Sources\s_CMemPooler.h" />
+    <ClInclude Include="Sources\s_CMinMd5.h" />
+    <ClInclude Include="Sources\s_CNetUser.h" />
+    <ClInclude Include="Sources\s_COdbcEnv.h" />
+    <ClInclude Include="Sources\s_COdbcManager.h" />
+    <ClInclude Include="Sources\s_COdbcSupervisor.h" />
+    <ClInclude Include="Sources\s_COverlapped.h" />
+    <ClInclude Include="Sources\s_CRandomNumber.h" />
+    <ClInclude Include="Sources\s_CServer.h" />
+    <ClInclude Include="Sources\s_CSessionServer.h" />
+    <ClInclude Include="Sources\s_CSMsgList.h" />
+    <ClInclude Include="Sources\s_CSystemInfo.h" />
+    <ClInclude Include="Sources\s_CUserChecker.h" />
+    <ClInclude Include="Sources\s_CWhiteRock.h" />
+    <ClInclude Include="Sources\s_CWhiteRockXML.h" />
+    <ClInclude Include="Sources\s_DbBase.h" />
+    <ClInclude Include="Sources\s_Util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Dependency\NetGlobal\minTea.cpp" />
+    <ClCompile Include="..\Dependency\NetGlobal\s_CBit.cpp" />
+    <ClCompile Include="..\Dependency\NetGlobal\s_NetGlobal.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Sources\ApexCloseList.cpp" />
+    <ClCompile Include="Sources\ApexProxy.cpp" />
+    <ClCompile Include="Sources\DaumGameAuth.cpp" />
+    <ClCompile Include="Sources\DaumGameCrypt.cpp" />
+    <ClCompile Include="Sources\ggsrv.cpp" />
+    <ClCompile Include="Sources\SendMsgBuffer.cpp" />
+    <ClCompile Include="Sources\s_CAddressChecker.cpp" />
+    <ClCompile Include="Sources\s_CAgentServer.cpp" />
+    <ClCompile Include="Sources\s_CAgentServerApex.cpp" />
+    <ClCompile Include="Sources\s_CAgentServerChannel.cpp" />
+    <ClCompile Include="Sources\s_CAgentServerMsg.cpp" />
+    <ClCompile Include="Sources\s_CAgentServerMsgCharacterDelete.cpp" />
+    <ClCompile Include="Sources\s_CAgentServerMsgLogin.cpp" />
+    <ClCompile Include="Sources\s_CAgentServerMsgNPROTECT.cpp" />
+    <ClCompile Include="Sources\s_CAgentServerSession.cpp" />
+    <ClCompile Include="Sources\s_CAgentServerThread.cpp" />
+    <ClCompile Include="Sources\s_CCfg.cpp" />
+    <ClCompile Include="Sources\s_CClientAgent.cpp" />
+    <ClCompile Include="Sources\s_CClientAgentNProtect.cpp" />
+    <ClCompile Include="Sources\s_CClientField.cpp" />
+    <ClCompile Include="Sources\s_CClientLogin.cpp" />
+    <ClCompile Include="Sources\s_CClientManager.cpp" />
+    <ClCompile Include="Sources\s_CClientSession.cpp" />
+    <ClCompile Include="Sources\s_CConsoleMessage.cpp" />
+    <ClCompile Include="Sources\s_CCsvFile.cpp" />
+    <ClCompile Include="Sources\s_CDbAction.cpp" />
+    <ClCompile Include="Sources\s_CDbActionGame.cpp" />
+    <ClCompile Include="Sources\s_CDbActionLog.cpp" />
+    <ClCompile Include="Sources\s_CDbActionUser.cpp" />
+    <ClCompile Include="Sources\s_CFieldServer.cpp" />
+    <ClCompile Include="Sources\s_CFieldServerMsg.cpp" />
+    <ClCompile Include="Sources\s_CFieldServerMsgNPROTECT.cpp" />
+    <ClCompile Include="Sources\s_CFieldServerSession.cpp" />
+    <ClCompile Include="Sources\s_CFieldServerThread.cpp" />
+    <ClCompile Include="Sources\s_CGetFileSize.cpp" />
+    <ClCompile Include="Sources\s_CLock.cpp" />
+    <ClCompile Include="Sources\s_CLoginServer.cpp" />
+    <ClCompile Include="Sources\s_CLoginServerMsg.cpp" />
+    <ClCompile Include="Sources\s_CLoginServerSession.cpp" />
+    <ClCompile Include="Sources\s_CLogSystem.cpp" />
+    <ClCompile Include="Sources\s_CMemPooler.cpp" />
+    <ClCompile Include="Sources\s_CMinMd5.cpp" />
+    <ClCompile Include="Sources\s_CNetUser.cpp" />
+    <ClCompile Include="Sources\s_CNetUserNProtect.cpp" />
+    <ClCompile Include="Sources\s_COdbcEnv.cpp" />
+    <ClCompile Include="Sources\s_COdbcGame.cpp" />
+    <ClCompile Include="Sources\s_COdbcGameChaCreate.cpp" />
+    <ClCompile Include="Sources\s_COdbcGameChaDelete.cpp" />
+    <ClCompile Include="Sources\s_COdbcGameChaGet.cpp" />
+    <ClCompile Include="Sources\s_COdbcGameChaHair.cpp" />
+    <ClCompile Include="Sources\s_COdbcGameChaRename.cpp" />
+    <ClCompile Include="Sources\s_COdbcGameChaSave.cpp" />
+    <ClCompile Include="Sources\s_COdbcGameClub.cpp" />
+    <ClCompile Include="Sources\s_COdbcGameFriend.cpp" />
+    <ClCompile Include="Sources\s_COdbcGameInven.cpp" />
+    <ClCompile Include="Sources\s_COdbcGamePet.cpp" />
+    <ClCompile Include="Sources\s_COdbcGameVehicle.cpp" />
+    <ClCompile Include="Sources\s_COdbcLog.cpp" />
+    <ClCompile Include="Sources\s_COdbcLogEvent.cpp" />
+    <ClCompile Include="Sources\s_COdbcLogItem.cpp" />
+    <ClCompile Include="Sources\s_COdbcManager.cpp" />
+    <ClCompile Include="Sources\s_COdbcShop.cpp" />
+    <ClCompile Include="Sources\s_COdbcSMS.cpp" />
+    <ClCompile Include="Sources\s_COdbcSupervisor.cpp" />
+    <ClCompile Include="Sources\s_COdbcUser.cpp" />
+    <ClCompile Include="Sources\s_COdbcUserCheck.cpp" />
+    <ClCompile Include="Sources\s_COdbcUserGetUserInfo.cpp" />
+    <ClCompile Include="Sources\s_COverlapped.cpp" />
+    <ClCompile Include="Sources\s_CRandomNumber.cpp" />
+    <ClCompile Include="Sources\s_CServer.cpp" />
+    <ClCompile Include="Sources\s_CSessionServer.cpp" />
+    <ClCompile Include="Sources\s_CSessionServerMsg.cpp" />
+    <ClCompile Include="Sources\s_CSessionServerThread.cpp" />
+    <ClCompile Include="Sources\s_CSMsgList.cpp" />
+    <ClCompile Include="Sources\s_CSystemInfo.cpp" />
+    <ClCompile Include="Sources\s_CUserChecker.cpp" />
+    <ClCompile Include="Sources\s_CWhiteRock.cpp" />
+    <ClCompile Include="Sources\s_CWhiteRockXML.cpp" />
+    <ClCompile Include="Sources\s_Util.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

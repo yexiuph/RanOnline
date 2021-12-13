@@ -1,0 +1,47 @@
+#ifndef DXPIECEDEFINE_H_
+#define DXPIECEDEFINE_H_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+//#include "DxPieceDefine.h"
+
+enum EMPIECECHAR
+{
+	PIECE_HEAD		= 0,
+	PIECE_UPBODY	= 1,
+	PIECE_LOBODY	= 2,
+	PIECE_GLOVE		= 3,
+	PIECE_RHAND		= 4,
+	PIECE_LHAND		= 5,
+	PIECE_FOOT		= 6,
+	PIECE_HAIR		= 7,
+	PIECE_HEADGEAR	= 8,
+	PIECE_VEHICLE	= 9,
+
+	PIECE_REV01		= 10,
+	PIECE_REV02		= 11,
+	PIECE_REV03		= 12,
+	PIECE_SIZE		= 13
+};
+
+enum EMPEACEZONEWEAPON
+{
+	EMPEACE_WEAPON_RSLOT = 0,
+	EMPEACE_WEAPON_WHAL_SLOT = 1,
+	EMPEACE_WEAPON_STICK_RSLOT = 2,
+	EMPEACE_WEAPON_SIZE = 3,
+};
+
+namespace SKINTYPE_STING
+{
+	const TCHAR	m_szWHEREBACKTYPE[EMPEACE_WEAPON_SIZE][64] =
+	{
+		_T("slot_rhand"),
+		_T("whal_slot"),
+		_T("stick_rslot"),
+	};
+};
+
+#endif // DXPIECEDEFINE_H_

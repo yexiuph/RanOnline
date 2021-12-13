@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_RZ|Win32">
+      <Configuration>Release_RZ</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{79B727A1-3EC4-46B9-B2ED-3739B6B843A6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ToolNPCActionEditor</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\game-client\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>NPCActionEditor</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\game-client\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>NPCActionEditor</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\game-client\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>NPCActionEditorD</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>./;./Resources;./Sources;../[Lib]__Engine/Sources;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxEffect;../[Lib]__Engine/Sources/DxLand;../[Lib]__Engine/Sources/DxMeshs;../[Lib]__Engine/Sources/DxTools;../[Lib]__Engine/Sources/G-Logic;../[Lib]__MfcEx/Sources;../[Lib]__MfcEx/Sources/ExLibs;../[Lib]__NetClient/Sources;../[Lib]__RanClient/Sources;../[Lib]__RanClient/Sources/G-Logic;../[Lib]__RanClient/Sources/G-Logic/Data;../[Lib]__RanClient/Sources/G-Logic/Npc;../[Lib]__RanClient/Sources/G-Logic/Quest;../[Lib]__RanClient/Sources/G-Logic/Server;../Dependency/common;../Dependency/directx;../Dependency/lzo;../Dependency/NetGlobal</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>../../game-client/$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>../Dependency/commonlib;../Dependency/directx/x86;../Dependency/lzo;../Dependency/tbblib/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalDependencies>dsound.lib;dinput8.lib;dxerr9.lib;d3dx9.lib;d3d9.lib;d3dxof.lib;dxguid.lib;imm32.lib;libogg.lib;libvorbis_static.lib;libvorbisfile_static.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;libcmtd.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>./;./Resources;./Sources;../[Lib]__Engine/Sources;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxEffect;../[Lib]__Engine/Sources/DxLand;../[Lib]__Engine/Sources/DxMeshs;../[Lib]__Engine/Sources/DxTools;../[Lib]__Engine/Sources/G-Logic;../[Lib]__MfcEx/Sources;../[Lib]__MfcEx/Sources/ExLibs;../[Lib]__NetClient/Sources;../[Lib]__RanClient/Sources;../[Lib]__RanClient/Sources/G-Logic;../[Lib]__RanClient/Sources/G-Logic/Data;../[Lib]__RanClient/Sources/G-Logic/Npc;../[Lib]__RanClient/Sources/G-Logic/Quest;../[Lib]__RanClient/Sources/G-Logic/Server;../Dependency/common;../Dependency/directx;../Dependency/lzo;../Dependency/NetGlobal</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>../../game-client/$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>../Dependency/commonlib;../Dependency/directx/x86;../Dependency/lzo;../Dependency/tbblib/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalDependencies>dsound.lib;dinput8.lib;dxerr9.lib;d3dx9.lib;d3d9.lib;d3dxof.lib;dxguid.lib;imm32.lib;libogg.lib;libvorbis_static.lib;libvorbisfile_static.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;libcmtd.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>./;./Resources;./Sources;../[Lib]__Engine/Sources;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxEffect;../[Lib]__Engine/Sources/DxLand;../[Lib]__Engine/Sources/DxMeshs;../[Lib]__Engine/Sources/DxTools;../[Lib]__Engine/Sources/G-Logic;../[Lib]__MfcEx/Sources;../[Lib]__MfcEx/Sources/ExLibs;../[Lib]__NetClient/Sources;../[Lib]__RanClient/Sources;../[Lib]__RanClient/Sources/G-Logic;../[Lib]__RanClient/Sources/G-Logic/Data;../[Lib]__RanClient/Sources/G-Logic/Npc;../[Lib]__RanClient/Sources/G-Logic/Quest;../[Lib]__RanClient/Sources/G-Logic/Server;../Dependency/common;../Dependency/directx;../Dependency/lzo;../Dependency/NetGlobal</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>../../game-client/$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>../Dependency/commonlib;../Dependency/directx/x86;../Dependency/lzo;../Dependency/tbblib/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalDependencies>dsound.lib;dinput8.lib;dxerr9.lib;d3dx9.lib;d3d9.lib;d3dxof.lib;dxguid.lib;imm32.lib;libogg.lib;libvorbis_static.lib;libvorbisfile_static.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;libcmtd.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Resources\Resource.h" />
+    <ClInclude Include="Sources\DlgNpcTalk.h" />
+    <ClInclude Include="Sources\DlgQuest.h" />
+    <ClInclude Include="Sources\FindItem.h" />
+    <ClInclude Include="Sources\HaveItemDialog.h" />
+    <ClInclude Include="Sources\LearnSkillDialog.h" />
+    <ClInclude Include="Sources\NpcAction.h" />
+    <ClInclude Include="Sources\NpcActionAnswer.h" />
+    <ClInclude Include="Sources\NpcActionCondition.h" />
+    <ClInclude Include="Sources\NpcActionDlg.h" />
+    <ClInclude Include="Sources\NpcActionPage.h" />
+    <ClInclude Include="Sources\NpcActionTable.h" />
+    <ClInclude Include="Sources\SheetWithTab.h" />
+    <ClInclude Include="Sources\SimpleEdit.h" />
+    <ClInclude Include="Sources\TalkPage.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Sources\DlgNpcTalk.cpp" />
+    <ClCompile Include="Sources\DlgQuest.cpp" />
+    <ClCompile Include="Sources\ExceptionAttacher.cpp" />
+    <ClCompile Include="Sources\FindItem.cpp" />
+    <ClCompile Include="Sources\HaveItemDialog.cpp" />
+    <ClCompile Include="Sources\LearnSkillDialog.cpp" />
+    <ClCompile Include="Sources\NpcAction.cpp" />
+    <ClCompile Include="Sources\NpcActionAnswer.cpp" />
+    <ClCompile Include="Sources\NpcActionCondition.cpp" />
+    <ClCompile Include="Sources\NpcActionDlg.cpp" />
+    <ClCompile Include="Sources\NpcActionPage.cpp" />
+    <ClCompile Include="Sources\NpcActionPageEx.cpp" />
+    <ClCompile Include="Sources\NpcActionTable.cpp" />
+    <ClCompile Include="Sources\SheetWithTab.cpp" />
+    <ClCompile Include="Sources\SimpleEdit.cpp" />
+    <ClCompile Include="Sources\TalkPage.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\toolbar2.bmp" />
+    <Image Include="Resources\[Tool]__NPCActionEditor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="Resources\[Tool]__NPCActionEditor.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources\[Tool]__NPCActionEditor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\[Tool]__NPCActionEditor.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\[Client]__BugTrap\[Client]__BugTrap.vcxproj">
+      <Project>{a50a8d67-547a-4479-b35e-b06ed398a7e8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\[Lib]__EngineSound\[Lib]__EngineSound.vcxproj">
+      <Project>{b3df4013-a7d8-4002-a529-723d1f917ca8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\[Lib]__EngineUI\[Lib]__EngineUI.vcxproj">
+      <Project>{d54a7a50-1c22-4199-925f-fe7a09ea1a5a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\[Lib]__Engine\[Lib]__Engine.vcxproj">
+      <Project>{1f650903-75f6-43bb-93ad-7a67b2488b01}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\[Lib]__MfcEx\[Lib]__MfcEx.vcxproj">
+      <Project>{46d6a409-7896-4686-86c8-5bbc3518d882}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\[Lib]__NetClient\[Lib]__NetClient.vcxproj">
+      <Project>{8567ca38-8687-4691-9dcf-accd061df35a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\[Lib]__NetServer\[Lib]__NetServer.vcxproj">
+      <Project>{523c5638-06a5-4a16-a05e-60a47a0f7cf9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\[Lib]__RanClientUI\[Lib]__RanClientUI.vcxproj">
+      <Project>{d5bad558-a7bc-48e4-98db-bf56188e04c7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\[Lib]__RanClient\[Lib]__RanClient.vcxproj">
+      <Project>{b70c5838-7961-45a0-91d0-4dfdd99b114d}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_RZ|Win32">
+      <Configuration>Release_RZ</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{D5BAD558-A7BC-48E4-98DB-BF56188E04C7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>LibRanClientUI</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>RanClientUI</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>RanClientUI</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>RanClientUID</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalIncludeDirectories>./;./Sources/ControlExUI;./Sources/InnerUI;./Sources/LoaderUI;./Sources/OuterUI;./Sources/TextUI;../[Lib]__Engine/Sources;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxEffect;../[Lib]__Engine/Sources/DxLand;../[Lib]__Engine/Sources/DxMeshs;../[Lib]__Engine/Sources/DxTools;../[Lib]__Engine/Sources/G-Logic;../[Lib]__EngineSound/Sources;../[Lib]__EngineSound/Sources/DxSound;../[Lib]__EngineSound/Sources/ogg;../[Lib]__EngineSound/Sources/vorbis;../[Lib]__EngineUI/Sources;../[Lib]__MfcEx/Sources;../[Lib]__MfcEx/Sources/ExLibs;../[Lib]__NetClient/Sources;../[Lib]__NetServer/Sources;../[Lib]__RanClient/Sources;../[Lib]__RanClient/Sources/DbAction;../[Lib]__RanClient/Sources/G-Logic;../[Lib]__RanClient/Sources/G-Logic/Client;../[Lib]__RanClient/Sources/G-Logic/Data;../[Lib]__RanClient/Sources/G-Logic/GLMsg;../[Lib]__RanClient/Sources/G-Logic/Npc;../[Lib]__RanClient/Sources/G-Logic/Quest;../[Lib]__RanClient/Sources/G-Logic/Server;../Dependency/common;../Dependency/directx;../Dependency/lzo;../Dependency/NetGlobal;../Dependency/tbblib/Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;RZ_PARAM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalIncludeDirectories>./;./Sources/ControlExUI;./Sources/InnerUI;./Sources/LoaderUI;./Sources/OuterUI;./Sources/TextUI;../[Lib]__Engine/Sources;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxEffect;../[Lib]__Engine/Sources/DxLand;../[Lib]__Engine/Sources/DxMeshs;../[Lib]__Engine/Sources/DxTools;../[Lib]__Engine/Sources/G-Logic;../[Lib]__EngineSound/Sources;../[Lib]__EngineSound/Sources/DxSound;../[Lib]__EngineSound/Sources/ogg;../[Lib]__EngineSound/Sources/vorbis;../[Lib]__EngineUI/Sources;../[Lib]__MfcEx/Sources;../[Lib]__MfcEx/Sources/ExLibs;../[Lib]__NetClient/Sources;../[Lib]__NetServer/Sources;../[Lib]__RanClient/Sources;../[Lib]__RanClient/Sources/DbAction;../[Lib]__RanClient/Sources/G-Logic;../[Lib]__RanClient/Sources/G-Logic/Client;../[Lib]__RanClient/Sources/G-Logic/Data;../[Lib]__RanClient/Sources/G-Logic/GLMsg;../[Lib]__RanClient/Sources/G-Logic/Npc;../[Lib]__RanClient/Sources/G-Logic/Quest;../[Lib]__RanClient/Sources/G-Logic/Server;../Dependency/common;../Dependency/directx;../Dependency/lzo;../Dependency/NetGlobal;../Dependency/tbblib/Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>./;./Sources/ControlExUI;./Sources/InnerUI;./Sources/LoaderUI;./Sources/OuterUI;./Sources/TextUI;../[Lib]__Engine/Sources;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxEffect;../[Lib]__Engine/Sources/DxLand;../[Lib]__Engine/Sources/DxMeshs;../[Lib]__Engine/Sources/DxTools;../[Lib]__Engine/Sources/G-Logic;../[Lib]__EngineSound/Sources;../[Lib]__EngineSound/Sources/DxSound;../[Lib]__EngineSound/Sources/ogg;../[Lib]__EngineSound/Sources/vorbis;../[Lib]__EngineUI/Sources;../[Lib]__MfcEx/Sources;../[Lib]__MfcEx/Sources/ExLibs;../[Lib]__NetClient/Sources;../[Lib]__NetServer/Sources;../[Lib]__RanClient/Sources;../[Lib]__RanClient/Sources/DbAction;../[Lib]__RanClient/Sources/G-Logic;../[Lib]__RanClient/Sources/G-Logic/Client;../[Lib]__RanClient/Sources/G-Logic/Data;../[Lib]__RanClient/Sources/G-Logic/GLMsg;../[Lib]__RanClient/Sources/G-Logic/Npc;../[Lib]__RanClient/Sources/G-Logic/Quest;../[Lib]__RanClient/Sources/G-Logic/Server;../Dependency/common;../Dependency/directx;../Dependency/lzo;../Dependency/NetGlobal;../Dependency/tbblib/Include</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Sources\ControlExUI\BasicComboBox.h" />
+    <ClInclude Include="Sources\ControlExUI\BasicComboBoxRollOver.h" />
+    <ClInclude Include="Sources\ControlExUI\BasicLineBox.h" />
+    <ClInclude Include="Sources\ControlExUI\BasicLineBoxButton.h" />
+    <ClInclude Include="Sources\ControlExUI\BasicLineBoxEx.h" />
+    <ClInclude Include="Sources\ControlExUI\BasicTextBoxEx.h" />
+    <ClInclude Include="Sources\ControlExUI\BasicTextButton.h" />
+    <ClInclude Include="Sources\ControlExUI\BasicTextButtonImage.h" />
+    <ClInclude Include="Sources\ControlExUI\BasicTreeEx.h" />
+    <ClInclude Include="Sources\ControlExUI\BasicVarTextBox.h" />
+    <ClInclude Include="Sources\ControlExUI\ModalWindow.h" />
+    <ClInclude Include="Sources\ControlExUI\UIOuterWindow.h" />
+    <ClInclude Include="Sources\ControlExUI\UIWindowEx.h" />
+    <ClInclude Include="Sources\InnerUI\AcademyConftDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\AdminMessageDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\AttendanceBookWindow.h" />
+    <ClInclude Include="Sources\InnerUI\AudioOption.h" />
+    <ClInclude Include="Sources\InnerUI\BasicChat.h" />
+    <ClInclude Include="Sources\InnerUI\BasicChatLeftBar.h" />
+    <ClInclude Include="Sources\InnerUI\BasicChatRightBody.h" />
+    <ClInclude Include="Sources\InnerUI\BasicEscMenu.h" />
+    <ClInclude Include="Sources\InnerUI\BasicGameMenu.h" />
+    <ClInclude Include="Sources\InnerUI\BasicHWOptionWindow.h" />
+    <ClInclude Include="Sources\InnerUI\BasicInfoView.h" />
+    <ClInclude Include="Sources\InnerUI\BasicLevelDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\BasicPotionTray.h" />
+    <ClInclude Include="Sources\InnerUI\BasicQuickPotionSlot.h" />
+    <ClInclude Include="Sources\InnerUI\BasicQuickPotionSlotEx.h" />
+    <ClInclude Include="Sources\InnerUI\BasicQuickSkillSlot.h" />
+    <ClInclude Include="Sources\InnerUI\BasicQuickSkillSlotEx.h" />
+    <ClInclude Include="Sources\InnerUI\BasicScrollBarEx.h" />
+    <ClInclude Include="Sources\InnerUI\BasicSkillTray.h" />
+    <ClInclude Include="Sources\InnerUI\BlockProgramAlarm.h" />
+    <ClInclude Include="Sources\InnerUI\BonusTimeDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\BonusTimeGauge.h" />
+    <ClInclude Include="Sources\InnerUI\BonusTimeType.h" />
+    <ClInclude Include="Sources\InnerUI\BusWindow.h" />
+    <ClInclude Include="Sources\InnerUI\Calendar.h" />
+    <ClInclude Include="Sources\InnerUI\CdmRankingDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\CharacterWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ChatMacroWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ChatShowFlag.h" />
+    <ClInclude Include="Sources\InnerUI\ClubAnnounce.h" />
+    <ClInclude Include="Sources\InnerUI\ClubBattle.h" />
+    <ClInclude Include="Sources\InnerUI\ClubBattleModalWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ClubMake.h" />
+    <ClInclude Include="Sources\InnerUI\ClubMember.h" />
+    <ClInclude Include="Sources\InnerUI\ClubUnion.h" />
+    <ClInclude Include="Sources\InnerUI\ClubWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ConftConfirm.h" />
+    <ClInclude Include="Sources\InnerUI\ConftDisplayMan.h" />
+    <ClInclude Include="Sources\InnerUI\ConftModalWindow.h" />
+    <ClInclude Include="Sources\InnerUI\CountMsg.h" />
+    <ClInclude Include="Sources\InnerUI\DamageDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\DamageDisplayMan.h" />
+    <ClInclude Include="Sources\InnerUI\DayBox.h" />
+    <ClInclude Include="Sources\InnerUI\DialogueWindow.h" />
+    <ClInclude Include="Sources\InnerUI\EscMenuOpen.h" />
+    <ClInclude Include="Sources\InnerUI\FaceStyleCard.h" />
+    <ClInclude Include="Sources\InnerUI\FriendWindow.h" />
+    <ClInclude Include="Sources\InnerUI\FriendWindowBlockPage.h" />
+    <ClInclude Include="Sources\InnerUI\FriendWindowNormalPage.h" />
+    <ClInclude Include="Sources\InnerUI\GambleAgainBox.h" />
+    <ClInclude Include="Sources\InnerUI\GambleAnimationBox.h" />
+    <ClInclude Include="Sources\InnerUI\GambleBox.h" />
+    <ClInclude Include="Sources\InnerUI\GambleResultBox.h" />
+    <ClInclude Include="Sources\InnerUI\GambleResultEvenBox.h" />
+    <ClInclude Include="Sources\InnerUI\GambleResultOddBox.h" />
+    <ClInclude Include="Sources\InnerUI\GambleSelectBox.h" />
+    <ClInclude Include="Sources\InnerUI\GamePlayOption.h" />
+    <ClInclude Include="Sources\InnerUI\GarbageInventoryPage.h" />
+    <ClInclude Include="Sources\InnerUI\GarbageInventoryWindow.h" />
+    <ClInclude Include="Sources\InnerUI\GatherGauge.h" />
+    <ClInclude Include="Sources\InnerUI\GenderChangeWindow.h" />
+    <ClInclude Include="Sources\InnerUI\HairColorCard.h" />
+    <ClInclude Include="Sources\InnerUI\HairStyleCard.h" />
+    <ClInclude Include="Sources\InnerUI\HeadChatDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\HeadChatDisplayMan.h" />
+    <ClInclude Include="Sources\InnerUI\HelpWindow.h" />
+    <ClInclude Include="Sources\InnerUI\HelpWindowWeb.h" />
+    <ClInclude Include="Sources\InnerUI\InBoxWindow.h" />
+    <ClInclude Include="Sources\InnerUI\InnerInterface.h" />
+    <ClInclude Include="Sources\InnerUI\InnerInterfaceGuid.h" />
+    <ClInclude Include="Sources\InnerUI\InventoryPage.h" />
+    <ClInclude Include="Sources\InnerUI\InventoryPageWear.h" />
+    <ClInclude Include="Sources\InnerUI\InventoryPageWearEx.h" />
+    <ClInclude Include="Sources\InnerUI\InventoryWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ItemBankPage.h" />
+    <ClInclude Include="Sources\InnerUI\ItemBankWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ItemGarbage.h" />
+    <ClInclude Include="Sources\InnerUI\ItemImage.h" />
+    <ClInclude Include="Sources\InnerUI\ItemMixInventoryPage.h" />
+    <ClInclude Include="Sources\InnerUI\ItemMixInventoryWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ItemMixWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ItemMove.h" />
+    <ClInclude Include="Sources\InnerUI\ItemRebuild.h" />
+    <ClInclude Include="Sources\InnerUI\ItemSearchResultWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ItemShopIcon.h" />
+    <ClInclude Include="Sources\InnerUI\ItemShopIconMan.h" />
+    <ClInclude Include="Sources\InnerUI\ItemShopWindowWeb.h" />
+    <ClInclude Include="Sources\InnerUI\ItemSlot.h" />
+    <ClInclude Include="Sources\InnerUI\ItemSlotEx.h" />
+    <ClInclude Include="Sources\InnerUI\ItemSlotPrivateMarket.h" />
+    <ClInclude Include="Sources\InnerUI\KeySettingWindow.h" />
+    <ClInclude Include="Sources\InnerUI\LargeMapWindow.h" />
+    <ClInclude Include="Sources\InnerUI\MapMoveDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\MapRequireCheck.h" />
+    <ClInclude Include="Sources\InnerUI\MarketPage.h" />
+    <ClInclude Include="Sources\InnerUI\MarketWindow.h" />
+    <ClInclude Include="Sources\InnerUI\MiniMap.h" />
+    <ClInclude Include="Sources\InnerUI\MiniMapInfo.h" />
+    <ClInclude Include="Sources\InnerUI\MiniPartySlot.h" />
+    <ClInclude Include="Sources\InnerUI\MiniPartyWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ModalCallerID.h" />
+    <ClInclude Include="Sources\InnerUI\NameDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\NameDisplayMan.h" />
+    <ClInclude Include="Sources\InnerUI\PartyBuffInfo.h" />
+    <ClInclude Include="Sources\InnerUI\PartyBuffInfoUnit.h" />
+    <ClInclude Include="Sources\InnerUI\PartyModalWindow.h" />
+    <ClInclude Include="Sources\InnerUI\PartySlot.h" />
+    <ClInclude Include="Sources\InnerUI\PartyWindow.h" />
+    <ClInclude Include="Sources\InnerUI\PetColorCard.h" />
+    <ClInclude Include="Sources\InnerUI\PetQuickSkillSlot.h" />
+    <ClInclude Include="Sources\InnerUI\PetRebirthDialogue.h" />
+    <ClInclude Include="Sources\InnerUI\PetSkillImage.h" />
+    <ClInclude Include="Sources\InnerUI\PetSkillPage.h" />
+    <ClInclude Include="Sources\InnerUI\PetSkillSlot.h" />
+    <ClInclude Include="Sources\InnerUI\PetSkillWindow.h" />
+    <ClInclude Include="Sources\InnerUI\PetskinMixImage.h" />
+    <ClInclude Include="Sources\InnerUI\PetStyleCard.h" />
+    <ClInclude Include="Sources\InnerUI\PetWindow.h" />
+    <ClInclude Include="Sources\InnerUI\PrivateMarketMake.h" />
+    <ClInclude Include="Sources\InnerUI\PrivateMarketPage.h" />
+    <ClInclude Include="Sources\InnerUI\PrivateMarketSellWindow.h" />
+    <ClInclude Include="Sources\InnerUI\PrivateMarketShow.h" />
+    <ClInclude Include="Sources\InnerUI\PrivateMarketShowMan.h" />
+    <ClInclude Include="Sources\InnerUI\PrivateMarketWindow.h" />
+    <ClInclude Include="Sources\InnerUI\PtoPWindow.h" />
+    <ClInclude Include="Sources\InnerUI\QBoxButton.h" />
+    <ClInclude Include="Sources\InnerUI\QuestAlarm.h" />
+    <ClInclude Include="Sources\InnerUI\QuestGiftView.h" />
+    <ClInclude Include="Sources\InnerUI\QuestHelper.h" />
+    <ClInclude Include="Sources\InnerUI\QuestionItemDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\QuestionItemType.h" />
+    <ClInclude Include="Sources\InnerUI\QuestList.h" />
+    <ClInclude Include="Sources\InnerUI\QuestMain.h" />
+    <ClInclude Include="Sources\InnerUI\QuestStep.h" />
+    <ClInclude Include="Sources\InnerUI\QuestWindow.h" />
+    <ClInclude Include="Sources\InnerUI\RebirthDialogue.h" />
+    <ClInclude Include="Sources\InnerUI\RebuildInventoryPage.h" />
+    <ClInclude Include="Sources\InnerUI\RebuildInventoryWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ReceiveNoteWindow.h" />
+    <ClInclude Include="Sources\InnerUI\SentWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ShopItemSearchWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ShotCutBox.h" />
+    <ClInclude Include="Sources\InnerUI\SimpleHP.h" />
+    <ClInclude Include="Sources\InnerUI\SimpleMessageMan.h" />
+    <ClInclude Include="Sources\InnerUI\SkillFunc.h" />
+    <ClInclude Include="Sources\InnerUI\SkillImage.h" />
+    <ClInclude Include="Sources\InnerUI\SkillImage33.h" />
+    <ClInclude Include="Sources\InnerUI\SkillPage.h" />
+    <ClInclude Include="Sources\InnerUI\SkillSlot.h" />
+    <ClInclude Include="Sources\InnerUI\SkillTimeDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\SkillTimeUnit.h" />
+    <ClInclude Include="Sources\InnerUI\SkillTrayTab.h" />
+    <ClInclude Include="Sources\InnerUI\SkillWindow.h" />
+    <ClInclude Include="Sources\InnerUI\SkillWindowToTray.h" />
+    <ClInclude Include="Sources\InnerUI\SMSSendWindow.h" />
+    <ClInclude Include="Sources\InnerUI\StorageChargeCard.h" />
+    <ClInclude Include="Sources\InnerUI\StoragePage.h" />
+    <ClInclude Include="Sources\InnerUI\StorageWindow.h" />
+    <ClInclude Include="Sources\InnerUI\SubMasterSet.h" />
+    <ClInclude Include="Sources\InnerUI\SummonPosionDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\SummonWindow.h" />
+    <ClInclude Include="Sources\InnerUI\SystemMessageDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\SystemMessageWindow.h" />
+    <ClInclude Include="Sources\InnerUI\TargetInfoDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\TaxiWindow.h" />
+    <ClInclude Include="Sources\InnerUI\ThaiCCafeMark.h" />
+    <ClInclude Include="Sources\InnerUI\TradeControlPage.h" />
+    <ClInclude Include="Sources\InnerUI\TradeInventoryPage.h" />
+    <ClInclude Include="Sources\InnerUI\TradeInventoryWindow.h" />
+    <ClInclude Include="Sources\InnerUI\TradePage.h" />
+    <ClInclude Include="Sources\InnerUI\TradeWindow.h" />
+    <ClInclude Include="Sources\InnerUI\UIInfoLoader.h" />
+    <ClInclude Include="Sources\InnerUI\UILeftTopGroup.h" />
+    <ClInclude Include="Sources\InnerUI\VehicleWindow.h" />
+    <ClInclude Include="Sources\InnerUI\VideoOption.h" />
+    <ClInclude Include="Sources\InnerUI\VNGainSysGauge.h" />
+    <ClInclude Include="Sources\InnerUI\VNGainSysInventory.h" />
+    <ClInclude Include="Sources\InnerUI\VNGainSysPage.h" />
+    <ClInclude Include="Sources\InnerUI\WaitServerDialogue.h" />
+    <ClInclude Include="Sources\InnerUI\WarningMsg.h" />
+    <ClInclude Include="Sources\InnerUI\WeaponDisplay.h" />
+    <ClInclude Include="Sources\InnerUI\WriteNoteWindow.h" />
+    <ClInclude Include="Sources\LoaderUI\LoadingMapThread.h" />
+    <ClInclude Include="Sources\LoaderUI\LoadingThread.h" />
+    <ClInclude Include="Sources\OuterUI\CreateCharacterPage.h" />
+    <ClInclude Include="Sources\OuterUI\CreateCharacterWeb.h" />
+    <ClInclude Include="Sources\OuterUI\LoginPage.h" />
+    <ClInclude Include="Sources\OuterUI\MessageWindow.h" />
+    <ClInclude Include="Sources\OuterUI\NewCreateCharEnum.h" />
+    <ClInclude Include="Sources\OuterUI\NewCreateCharPage.h" />
+    <ClInclude Include="Sources\OuterUI\OuterInterface.h" />
+    <ClInclude Include="Sources\OuterUI\PassKeyboard.h" />
+    <ClInclude Include="Sources\OuterUI\SecPassCheckPage.h" />
+    <ClInclude Include="Sources\OuterUI\SecPassSetPage.h" />
+    <ClInclude Include="Sources\OuterUI\SelectCharacterCard.h" />
+    <ClInclude Include="Sources\OuterUI\SelectCharacterInfoPage.h" />
+    <ClInclude Include="Sources\OuterUI\SelectCharacterLeftPage.h" />
+    <ClInclude Include="Sources\OuterUI\SelectCharacterPage.h" />
+    <ClInclude Include="Sources\OuterUI\SelectChinaAreaPage.h" />
+    <ClInclude Include="Sources\OuterUI\SelectClassPage.h" />
+    <ClInclude Include="Sources\OuterUI\SelectSchoolPage.h" />
+    <ClInclude Include="Sources\OuterUI\SelectServerChannel.h" />
+    <ClInclude Include="Sources\OuterUI\SelectServerPage.h" />
+    <ClInclude Include="Sources\OuterUI\SelectSexPage.h" />
+    <ClInclude Include="Sources\OuterUI\SelectStylePage.h" />
+    <ClInclude Include="Sources\OuterUI\WaitDialogue.h" />
+    <ClInclude Include="Sources\TextUI\GameTextControl.h" />
+    <ClInclude Include="Sources\TextUI\UITextControl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\BasicComboBox.cpp" />
+    <ClCompile Include="Sources\ControlExUI\BasicComboBoxRollOver.cpp" />
+    <ClCompile Include="Sources\ControlExUI\BasicLineBox.cpp" />
+    <ClCompile Include="Sources\ControlExUI\BasicLineBoxButton.cpp" />
+    <ClCompile Include="Sources\ControlExUI\BasicLineBoxEx.cpp" />
+    <ClCompile Include="Sources\ControlExUI\BasicTextBoxEx.cpp" />
+    <ClCompile Include="Sources\ControlExUI\BasicTextButton.cpp" />
+    <ClCompile Include="Sources\ControlExUI\BasicTextButtonEx.cpp" />
+    <ClCompile Include="Sources\ControlExUI\BasicTextButtonImage.cpp" />
+    <ClCompile Include="Sources\ControlExUI\BasicTreeEx.cpp" />
+    <ClCompile Include="Sources\ControlExUI\BasicVarTextBox.cpp" />
+    <ClCompile Include="Sources\ControlExUI\ModalWindow.cpp" />
+    <ClCompile Include="Sources\ControlExUI\UIOuterWindow.cpp" />
+    <ClCompile Include="Sources\ControlExUI\UIWindowEx.cpp" />
+    <ClCompile Include="Sources\InnerUI\AcademyConftDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\AdminMessageDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\AttendanceBookWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\AudioOption.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicChat.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicChatLeftBar.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicChatRightBody.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicChatRightBodyEx.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicEscMenu.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicGameMenu.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicHWOptionWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicInfoView.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicLevelDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicPotionTray.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicQuickPotionSlot.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicQuickPotionSlotEx.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicQuickSkillSlot.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicQuickSkillSlotEx.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicScrollBarEx.cpp" />
+    <ClCompile Include="Sources\InnerUI\BasicSkillTray.cpp" />
+    <ClCompile Include="Sources\InnerUI\BlockProgramAlarm.cpp" />
+    <ClCompile Include="Sources\InnerUI\BonusTimeDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\BonusTimeGauge.cpp" />
+    <ClCompile Include="Sources\InnerUI\BonusTimeType.cpp" />
+    <ClCompile Include="Sources\InnerUI\BusWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\Calendar.cpp" />
+    <ClCompile Include="Sources\InnerUI\CdmRankingDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\CharacterWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\CharacterWindowEx.cpp" />
+    <ClCompile Include="Sources\InnerUI\CharacterWindowMsg.cpp" />
+    <ClCompile Include="Sources\InnerUI\CharacterWindowUpdate.cpp" />
+    <ClCompile Include="Sources\InnerUI\ChatMacroWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\ChatShowFlag.cpp" />
+    <ClCompile Include="Sources\InnerUI\ClubAnnounce.cpp" />
+    <ClCompile Include="Sources\InnerUI\ClubBattle.cpp" />
+    <ClCompile Include="Sources\InnerUI\ClubBattleModalWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\ClubMake.cpp" />
+    <ClCompile Include="Sources\InnerUI\ClubMember.cpp" />
+    <ClCompile Include="Sources\InnerUI\ClubUnion.cpp" />
+    <ClCompile Include="Sources\InnerUI\ClubWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\ConftConfirm.cpp" />
+    <ClCompile Include="Sources\InnerUI\ConftDisplayMan.cpp" />
+    <ClCompile Include="Sources\InnerUI\ConftModalWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\ConftModalWindowMsg.cpp" />
+    <ClCompile Include="Sources\InnerUI\CountMsg.cpp" />
+    <ClCompile Include="Sources\InnerUI\DamageDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\DamageDisplayMan.cpp" />
+    <ClCompile Include="Sources\InnerUI\DayBox.cpp" />
+    <ClCompile Include="Sources\InnerUI\DialogueWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\EscMenuOpen.cpp" />
+    <ClCompile Include="Sources\InnerUI\FaceStyleCard.cpp" />
+    <ClCompile Include="Sources\InnerUI\FriendWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\FriendWindowBlockPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\FriendWindowNormalPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\GambleAgainBox.cpp" />
+    <ClCompile Include="Sources\InnerUI\GambleAnimationBox.cpp" />
+    <ClCompile Include="Sources\InnerUI\GambleBox .cpp" />
+    <ClCompile Include="Sources\InnerUI\GambleResultBox.cpp" />
+    <ClCompile Include="Sources\InnerUI\GambleResultEvenBox.cpp" />
+    <ClCompile Include="Sources\InnerUI\GambleResultOddBox.cpp" />
+    <ClCompile Include="Sources\InnerUI\GambleSelectBox.cpp" />
+    <ClCompile Include="Sources\InnerUI\GamePlayOption.cpp" />
+    <ClCompile Include="Sources\InnerUI\GamePlayOptionMsg.cpp" />
+    <ClCompile Include="Sources\InnerUI\GarbageInventoryPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\GarbageInventoryWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\GatherGauge.cpp" />
+    <ClCompile Include="Sources\InnerUI\GenderChangeWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\HairColorCard.cpp" />
+    <ClCompile Include="Sources\InnerUI\HairStyleCard.cpp" />
+    <ClCompile Include="Sources\InnerUI\HeadChatDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\HeadChatDisplayMan.cpp" />
+    <ClCompile Include="Sources\InnerUI\HelpWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\HelpWindowWeb.cpp" />
+    <ClCompile Include="Sources\InnerUI\InBoxWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\InnerInterface.cpp" />
+    <ClCompile Include="Sources\InnerUI\InnerInterfaceModalMsg.cpp" />
+    <ClCompile Include="Sources\InnerUI\InnerInterfaceMsg.cpp" />
+    <ClCompile Include="Sources\InnerUI\InnerInterfaceSimple.cpp" />
+    <ClCompile Include="Sources\InnerUI\InventoryPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\InventoryPageWear.cpp" />
+    <ClCompile Include="Sources\InnerUI\InventoryPageWearEx.cpp" />
+    <ClCompile Include="Sources\InnerUI\InventoryWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemBankPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemBankWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemGarbage.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemImage.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemMixInventoryPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemMixInventoryWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemMixWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemMove.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemRebuild.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemSearchResultWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemShopIcon.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemShopIconMan.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemShopWindowWeb.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemSlot.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemSlotEx.cpp" />
+    <ClCompile Include="Sources\InnerUI\ItemSlotPrivateMarket.cpp" />
+    <ClCompile Include="Sources\InnerUI\KeySettingWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\LargeMapWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\LargeMapWindowEx.cpp" />
+    <ClCompile Include="Sources\InnerUI\MapMoveDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\MapRequireCheck.cpp" />
+    <ClCompile Include="Sources\InnerUI\MarketPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\MarketWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\MiniMap.cpp" />
+    <ClCompile Include="Sources\InnerUI\MiniMapInfo.cpp" />
+    <ClCompile Include="Sources\InnerUI\MiniPartySlot.cpp" />
+    <ClCompile Include="Sources\InnerUI\MiniPartyWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\NameDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\NameDisplayMan.cpp" />
+    <ClCompile Include="Sources\InnerUI\PartyBuffInfo.cpp" />
+    <ClCompile Include="Sources\InnerUI\PartyBuffInfoUnit.cpp" />
+    <ClCompile Include="Sources\InnerUI\PartyModalWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\PartyModalWindowMsg.cpp" />
+    <ClCompile Include="Sources\InnerUI\PartySlot.cpp" />
+    <ClCompile Include="Sources\InnerUI\PartyWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\PetColorCard.cpp" />
+    <ClCompile Include="Sources\InnerUI\PetQuickSkillSlot.cpp" />
+    <ClCompile Include="Sources\InnerUI\PetRebirthDialogue.cpp" />
+    <ClCompile Include="Sources\InnerUI\PetSkillImage.cpp" />
+    <ClCompile Include="Sources\InnerUI\PetSkillPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\PetSkillSlot.cpp" />
+    <ClCompile Include="Sources\InnerUI\PetSkillWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\PetskinMixImage.cpp" />
+    <ClCompile Include="Sources\InnerUI\PetStyleCard.cpp" />
+    <ClCompile Include="Sources\InnerUI\PetWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\PrivateMarketMake.cpp" />
+    <ClCompile Include="Sources\InnerUI\PrivateMarketPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\PrivateMarketSellWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\PrivateMarketShow.cpp" />
+    <ClCompile Include="Sources\InnerUI\PrivateMarketShowMan.cpp" />
+    <ClCompile Include="Sources\InnerUI\PrivateMarketWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\PtoPWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\QBoxButton.cpp" />
+    <ClCompile Include="Sources\InnerUI\QuestAlarm.cpp" />
+    <ClCompile Include="Sources\InnerUI\QuestGiftView.cpp" />
+    <ClCompile Include="Sources\InnerUI\QuestHelper.cpp" />
+    <ClCompile Include="Sources\InnerUI\QuestionItemDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\QuestionItemType.cpp" />
+    <ClCompile Include="Sources\InnerUI\QuestList.cpp" />
+    <ClCompile Include="Sources\InnerUI\QuestMain.cpp" />
+    <ClCompile Include="Sources\InnerUI\QuestStep.cpp" />
+    <ClCompile Include="Sources\InnerUI\QuestWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\RebirthDialogue.cpp" />
+    <ClCompile Include="Sources\InnerUI\RebuildInventoryPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\RebuildInventoryWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\ReceiveNoteWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\SentWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\ShopItemSearchWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\ShotCutBox.cpp" />
+    <ClCompile Include="Sources\InnerUI\SimpleHP.cpp" />
+    <ClCompile Include="Sources\InnerUI\SimpleMessageMan.cpp" />
+    <ClCompile Include="Sources\InnerUI\SkillFunc.cpp" />
+    <ClCompile Include="Sources\InnerUI\SkillImage.cpp" />
+    <ClCompile Include="Sources\InnerUI\SkillImage33.cpp" />
+    <ClCompile Include="Sources\InnerUI\SkillPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\SkillSlot.cpp" />
+    <ClCompile Include="Sources\InnerUI\SkillTimeDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\SkillTimeUnit.cpp" />
+    <ClCompile Include="Sources\InnerUI\SkillTrayTab.cpp" />
+    <ClCompile Include="Sources\InnerUI\SkillWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\SkillWindowToTray.cpp" />
+    <ClCompile Include="Sources\InnerUI\SMSSendWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\StorageChargeCard.cpp" />
+    <ClCompile Include="Sources\InnerUI\StoragePage.cpp" />
+    <ClCompile Include="Sources\InnerUI\StorageWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\SubMasterSet.cpp" />
+    <ClCompile Include="Sources\InnerUI\SummonPosionDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\SummonWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\SystemMessageDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\SystemMessageWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\TargetInfoDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\TaxiWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\ThaiCCafeMark.cpp" />
+    <ClCompile Include="Sources\InnerUI\TradeControlPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\TradeInventoryPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\TradeInventoryWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\TradePage.cpp" />
+    <ClCompile Include="Sources\InnerUI\TradeWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\UIItemInfoLoader.cpp" />
+    <ClCompile Include="Sources\InnerUI\UILeftTopGroup.cpp" />
+    <ClCompile Include="Sources\InnerUI\UISkillInfoLoader.cpp" />
+    <ClCompile Include="Sources\InnerUI\VehicleWindow.cpp" />
+    <ClCompile Include="Sources\InnerUI\VideoOption.cpp" />
+    <ClCompile Include="Sources\InnerUI\VideoOptionMsg.cpp" />
+    <ClCompile Include="Sources\InnerUI\VNGainSysGauge.cpp" />
+    <ClCompile Include="Sources\InnerUI\VNGainSysInventory.cpp" />
+    <ClCompile Include="Sources\InnerUI\VNGainSysPage.cpp" />
+    <ClCompile Include="Sources\InnerUI\WaitServerDialogue.cpp" />
+    <ClCompile Include="Sources\InnerUI\WarningMsg.cpp" />
+    <ClCompile Include="Sources\InnerUI\WeaponDisplay.cpp" />
+    <ClCompile Include="Sources\InnerUI\WriteNoteWindow.cpp" />
+    <ClCompile Include="Sources\LoaderUI\LoadingMapThread.cpp" />
+    <ClCompile Include="Sources\LoaderUI\LoadingThread.cpp" />
+    <ClCompile Include="Sources\OuterUI\CreateCharacterPage.cpp" />
+    <ClCompile Include="Sources\OuterUI\CreateCharacterWeb.cpp" />
+    <ClCompile Include="Sources\OuterUI\LoginPage.cpp" />
+    <ClCompile Include="Sources\OuterUI\MessageWindow.cpp" />
+    <ClCompile Include="Sources\OuterUI\NewCreateCharPage.cpp" />
+    <ClCompile Include="Sources\OuterUI\OuterInterface.cpp" />
+    <ClCompile Include="Sources\OuterUI\OuterInterfaceModalMsg.cpp" />
+    <ClCompile Include="Sources\OuterUI\OuterInterfaceMsg.cpp" />
+    <ClCompile Include="Sources\OuterUI\OuterInterfaceSimple.cpp" />
+    <ClCompile Include="Sources\OuterUI\PassKeyboard.cpp" />
+    <ClCompile Include="Sources\OuterUI\SecPassCheckPage.cpp" />
+    <ClCompile Include="Sources\OuterUI\SecPassSetPage.cpp" />
+    <ClCompile Include="Sources\OuterUI\SelectCharacterCard.cpp" />
+    <ClCompile Include="Sources\OuterUI\SelectCharacterInfoPage.cpp" />
+    <ClCompile Include="Sources\OuterUI\SelectCharacterLeftPage.cpp" />
+    <ClCompile Include="Sources\OuterUI\SelectCharacterPage.cpp" />
+    <ClCompile Include="Sources\OuterUI\SelectChinaAreaPage.cpp" />
+    <ClCompile Include="Sources\OuterUI\SelectClassPage.cpp" />
+    <ClCompile Include="Sources\OuterUI\SelectSchoolPage.cpp" />
+    <ClCompile Include="Sources\OuterUI\SelectServerChannel.cpp" />
+    <ClCompile Include="Sources\OuterUI\SelectServerPage.cpp" />
+    <ClCompile Include="Sources\OuterUI\SelectServerPageTw.cpp" />
+    <ClCompile Include="Sources\OuterUI\SelectSexPage.cpp" />
+    <ClCompile Include="Sources\OuterUI\SelectStylePage.cpp" />
+    <ClCompile Include="Sources\OuterUI\WaitDialogue.cpp" />
+    <ClCompile Include="Sources\TextUI\GameTextControl.cpp" />
+    <ClCompile Include="Sources\TextUI\UITextControl.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,1417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\ControlExUI">
+      <UniqueIdentifier>{0ede3834-fd75-4c9f-a014-aaf2b74e4b8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InnerUI">
+      <UniqueIdentifier>{6ed14e1a-b334-4b0f-b8ee-1e476f2dba48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LoaderUI">
+      <UniqueIdentifier>{1c968ba1-7e9e-4f55-8568-915f1cb8f87e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InnerUI\Fixed">
+      <UniqueIdentifier>{335a26ef-8274-4d53-8fac-266673423be5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InnerUI\Moveable">
+      <UniqueIdentifier>{78d9e776-95a7-4af2-8aa9-9df20b495935}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InnerUI\Other">
+      <UniqueIdentifier>{5a3c0f0a-1f16-46e9-b774-0bbc0b79cbbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TextUI">
+      <UniqueIdentifier>{e2373d15-acab-48f2-99bb-464efce89dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OuterUI">
+      <UniqueIdentifier>{f93ff77f-ce5b-4030-90c7-26a88d44c415}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ControlExUI\BasicComboBox.h">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ControlExUI\BasicComboBoxRollOver.h">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ControlExUI\BasicLineBox.h">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ControlExUI\BasicLineBoxButton.h">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ControlExUI\BasicLineBoxEx.h">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ControlExUI\BasicTextBoxEx.h">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ControlExUI\BasicTextButton.h">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ControlExUI\BasicTextButtonImage.h">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ControlExUI\BasicTreeEx.h">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ControlExUI\BasicVarTextBox.h">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ControlExUI\ModalWindow.h">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ControlExUI\UIOuterWindow.h">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ControlExUI\UIWindowEx.h">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\LoaderUI\LoadingMapThread.h">
+      <Filter>Source Files\LoaderUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\LoaderUI\LoadingThread.h">
+      <Filter>Source Files\LoaderUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\CreateCharacterPage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\CreateCharacterWeb.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\LoginPage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\MessageWindow.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\NewCreateCharEnum.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\NewCreateCharPage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\OuterInterface.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\PassKeyboard.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\SecPassCheckPage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\SecPassSetPage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\SelectCharacterCard.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\SelectCharacterInfoPage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\SelectCharacterLeftPage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\SelectCharacterPage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\SelectChinaAreaPage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\SelectClassPage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\SelectSchoolPage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\SelectServerChannel.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\SelectServerPage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\SelectSexPage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\SelectStylePage.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OuterUI\WaitDialogue.h">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\TextUI\GameTextControl.h">
+      <Filter>Source Files\TextUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\TextUI\UITextControl.h">
+      <Filter>Source Files\TextUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\InnerInterface.h">
+      <Filter>Source Files\InnerUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\InnerInterfaceGuid.h">
+      <Filter>Source Files\InnerUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ModalCallerID.h">
+      <Filter>Source Files\InnerUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\AdminMessageDisplay.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicChat.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicChatLeftBar.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicChatRightBody.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicEscMenu.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicGameMenu.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicInfoView.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicLevelDisplay.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicPotionTray.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicQuickPotionSlot.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicQuickPotionSlotEx.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicQuickSkillSlot.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicQuickSkillSlotEx.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicSkillTray.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ChatShowFlag.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\EscMenuOpen.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\MiniMap.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\MiniMapInfo.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\QBoxButton.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\QuestAlarm.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SimpleMessageMan.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SkillFunc.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SkillTimeDisplay.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SkillTimeUnit.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SkillTrayTab.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SystemMessageDisplay.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\UILeftTopGroup.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\WeaponDisplay.h">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\AudioOption.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicHWOptionWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\CharacterWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ChatMacroWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ClubAnnounce.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ClubBattle.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ClubMember.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ClubUnion.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ClubWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\FriendWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\FriendWindowBlockPage.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\FriendWindowNormalPage.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\GamePlayOption.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\HelpWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\HelpWindowWeb.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\InBoxWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\InventoryPage.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\InventoryPageWear.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\InventoryPageWearEx.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\InventoryWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemBankPage.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemBankWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemImage.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemSearchResultWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemSlot.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemSlotEx.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemSlotPrivateMarket.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\KeySettingWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\LargeMapWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\MarketPage.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\MarketWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\MiniPartySlot.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\MiniPartyWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PartyBuffInfo.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PartyBuffInfoUnit.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PartySlot.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PartyWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PrivateMarketPage.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PrivateMarketWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\QuestGiftView.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\QuestList.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\QuestMain.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\QuestStep.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\QuestWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ReceiveNoteWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SentWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ShopItemSearchWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ShotCutBox.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SkillImage.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SkillImage33.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SkillPage.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SkillSlot.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SkillWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SMSSendWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\StoragePage.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\StorageWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SubMasterSet.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\TradeControlPage.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\TradeInventoryPage.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\TradeInventoryWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\TradePage.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\TradeWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\VideoOption.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\WriteNoteWindow.h">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\AcademyConftDisplay.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\AttendanceBookWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BasicScrollBarEx.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BlockProgramAlarm.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BonusTimeDisplay.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BonusTimeGauge.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BonusTimeType.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\BusWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\Calendar.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\CdmRankingDisplay.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ClubBattleModalWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ClubMake.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ConftConfirm.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ConftDisplayMan.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ConftModalWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\CountMsg.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\DamageDisplay.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\DamageDisplayMan.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\DayBox.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\DialogueWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\FaceStyleCard.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\GambleAgainBox.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\GambleAnimationBox.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\GambleBox.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\GambleResultBox.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\GambleResultEvenBox.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\GambleResultOddBox.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\GambleSelectBox.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\GarbageInventoryPage.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\GarbageInventoryWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\GatherGauge.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\GenderChangeWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\HairColorCard.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\HairStyleCard.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\HeadChatDisplay.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\HeadChatDisplayMan.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemGarbage.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemMixInventoryPage.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemMixInventoryWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemMixWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemMove.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemRebuild.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemShopIcon.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemShopIconMan.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ItemShopWindowWeb.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\MapMoveDisplay.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\MapRequireCheck.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\NameDisplay.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\NameDisplayMan.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PartyModalWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PetColorCard.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PetQuickSkillSlot.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PetRebirthDialogue.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PetSkillImage.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PetSkillPage.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PetSkillSlot.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PetSkillWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PetskinMixImage.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PetStyleCard.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PetWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PrivateMarketMake.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PrivateMarketSellWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PrivateMarketShow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PrivateMarketShowMan.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\PtoPWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\QuestHelper.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\QuestionItemDisplay.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\QuestionItemType.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\RebirthDialogue.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\RebuildInventoryPage.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\RebuildInventoryWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SimpleHP.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SkillWindowToTray.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\StorageChargeCard.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SummonPosionDisplay.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SummonWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\SystemMessageWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\TargetInfoDisplay.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\TaxiWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\ThaiCCafeMark.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\UIInfoLoader.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\VehicleWindow.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\VNGainSysGauge.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\VNGainSysInventory.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\VNGainSysPage.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\WaitServerDialogue.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\InnerUI\WarningMsg.h">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\BasicComboBox.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\BasicComboBoxRollOver.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\BasicLineBox.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\BasicLineBoxButton.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\BasicLineBoxEx.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\BasicTextBoxEx.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\BasicTextButton.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\BasicTextButtonEx.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\BasicTextButtonImage.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\BasicTreeEx.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\BasicVarTextBox.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\ModalWindow.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\UIOuterWindow.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ControlExUI\UIWindowEx.cpp">
+      <Filter>Source Files\ControlExUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\LoaderUI\LoadingMapThread.cpp">
+      <Filter>Source Files\LoaderUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\LoaderUI\LoadingThread.cpp">
+      <Filter>Source Files\LoaderUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\CreateCharacterPage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\CreateCharacterWeb.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\LoginPage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\MessageWindow.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\NewCreateCharPage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\OuterInterface.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\OuterInterfaceModalMsg.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\OuterInterfaceMsg.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\OuterInterfaceSimple.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\PassKeyboard.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SecPassCheckPage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SecPassSetPage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SelectCharacterCard.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SelectCharacterInfoPage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SelectCharacterLeftPage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SelectCharacterPage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SelectChinaAreaPage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SelectClassPage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SelectSchoolPage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SelectServerChannel.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SelectServerPage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SelectServerPageTw.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SelectSexPage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\SelectStylePage.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OuterUI\WaitDialogue.cpp">
+      <Filter>Source Files\OuterUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\TextUI\GameTextControl.cpp">
+      <Filter>Source Files\TextUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\TextUI\UITextControl.cpp">
+      <Filter>Source Files\TextUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\InnerInterface.cpp">
+      <Filter>Source Files\InnerUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\InnerInterfaceModalMsg.cpp">
+      <Filter>Source Files\InnerUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\InnerInterfaceMsg.cpp">
+      <Filter>Source Files\InnerUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\InnerInterfaceSimple.cpp">
+      <Filter>Source Files\InnerUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\AdminMessageDisplay.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicChat.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicChatLeftBar.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicChatRightBody.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicChatRightBodyEx.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicEscMenu.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicGameMenu.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicInfoView.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicLevelDisplay.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicPotionTray.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicQuickPotionSlot.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicQuickPotionSlotEx.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicQuickSkillSlot.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicQuickSkillSlotEx.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicSkillTray.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ChatShowFlag.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\EscMenuOpen.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\MiniMap.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\MiniMapInfo.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\QBoxButton.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\QuestAlarm.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SimpleMessageMan.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SkillFunc.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SkillTimeDisplay.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SkillTimeUnit.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SkillTrayTab.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SystemMessageDisplay.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\UILeftTopGroup.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\WeaponDisplay.cpp">
+      <Filter>Source Files\InnerUI\Fixed</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\AudioOption.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicHWOptionWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\CharacterWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\CharacterWindowEx.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\CharacterWindowMsg.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\CharacterWindowUpdate.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ChatMacroWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ClubAnnounce.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ClubBattle.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ClubMember.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ClubUnion.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ClubWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\FriendWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\FriendWindowBlockPage.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\FriendWindowNormalPage.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\GamePlayOption.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\GamePlayOptionMsg.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\HelpWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\HelpWindowWeb.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\InBoxWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\InventoryPage.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\InventoryPageWear.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\InventoryPageWearEx.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\InventoryWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemBankPage.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemBankWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemImage.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemSearchResultWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemSlot.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemSlotEx.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemSlotPrivateMarket.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\KeySettingWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\LargeMapWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\LargeMapWindowEx.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\MarketPage.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\MarketWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\MiniPartySlot.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\MiniPartyWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PartyBuffInfo.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PartyBuffInfoUnit.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PartySlot.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PartyWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PrivateMarketPage.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PrivateMarketWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\QuestGiftView.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\QuestList.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\QuestMain.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\QuestStep.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\QuestWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ReceiveNoteWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SentWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ShopItemSearchWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ShotCutBox.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SkillImage.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SkillImage33.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SkillPage.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SkillSlot.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SkillWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SMSSendWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\StoragePage.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\StorageWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SubMasterSet.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\TradeControlPage.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\TradeInventoryPage.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\TradeInventoryWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\TradePage.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\TradeWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\VideoOption.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\VideoOptionMsg.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\WriteNoteWindow.cpp">
+      <Filter>Source Files\InnerUI\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\AcademyConftDisplay.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\AttendanceBookWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BasicScrollBarEx.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BlockProgramAlarm.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BonusTimeDisplay.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BonusTimeGauge.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BonusTimeType.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\BusWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\Calendar.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\CdmRankingDisplay.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ClubBattleModalWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ClubMake.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ConftConfirm.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ConftDisplayMan.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ConftModalWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ConftModalWindowMsg.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\CountMsg.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\DamageDisplay.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\DamageDisplayMan.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\DayBox.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\DialogueWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\FaceStyleCard.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\GambleAgainBox.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\GambleAnimationBox.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\GambleBox .cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\GambleResultBox.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\GambleResultEvenBox.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\GambleResultOddBox.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\GambleSelectBox.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\GarbageInventoryPage.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\GarbageInventoryWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\GatherGauge.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\GenderChangeWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\HairColorCard.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\HairStyleCard.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\HeadChatDisplay.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\HeadChatDisplayMan.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemGarbage.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemMixInventoryPage.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemMixInventoryWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemMixWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemMove.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemRebuild.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemShopIcon.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemShopIconMan.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ItemShopWindowWeb.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\MapMoveDisplay.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\MapRequireCheck.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\NameDisplay.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\NameDisplayMan.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PartyModalWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PartyModalWindowMsg.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PetColorCard.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PetQuickSkillSlot.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PetRebirthDialogue.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PetSkillImage.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PetSkillPage.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PetSkillSlot.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PetSkillWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PetskinMixImage.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PetStyleCard.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PetWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PrivateMarketMake.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PrivateMarketSellWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PrivateMarketShow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PrivateMarketShowMan.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\PtoPWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\QuestHelper.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\QuestionItemDisplay.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\QuestionItemType.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\RebirthDialogue.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\RebuildInventoryPage.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\RebuildInventoryWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SimpleHP.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SkillWindowToTray.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\StorageChargeCard.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SummonPosionDisplay.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SummonWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\SystemMessageWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\TargetInfoDisplay.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\TaxiWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\ThaiCCafeMark.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\UIItemInfoLoader.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\UISkillInfoLoader.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\VehicleWindow.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\VNGainSysGauge.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\VNGainSysInventory.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\VNGainSysPage.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\WaitServerDialogue.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\InnerUI\WarningMsg.cpp">
+      <Filter>Source Files\InnerUI\Other</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_RZ|Win32">
+      <Configuration>Release_RZ</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{46D6A409-7896-4686-86C8-5BBC3518D882}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>LibMfcEx</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>MfcEx</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>MfcEx</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Builds\Bin\[Lib]\$(ProjectName)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Builds\Obj\$(ProjectName)$(Configuration)\</IntDir>
+    <TargetName>MfcExD</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalIncludeDirectories>./;./Sources;./Sources/DaumParam;./Sources/ExLibs;./Sources/RanOnlineLanchClipboard;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxTools;../[Lib]__Engine/Sources/G-Logic;../Dependency/common;../Dependency/directx;../Dependency/lzo</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;RZ_PARAM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalIncludeDirectories>./;./Sources;./Sources/DaumParam;./Sources/ExLibs;./Sources/RanOnlineLanchClipboard;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxTools;../[Lib]__Engine/Sources/G-Logic;../Dependency/common;../Dependency/directx;../Dependency/lzo</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>./;./Sources;./Sources/DaumParam;./Sources/ExLibs;./Sources/RanOnlineLanchClipboard;../[Lib]__Engine/Sources/Common;../[Lib]__Engine/Sources/DxCommon;../[Lib]__Engine/Sources/DxCommon9;../[Lib]__Engine/Sources/DxTools;../[Lib]__Engine/Sources/G-Logic;../Dependency/common;../Dependency/directx;../Dependency/lzo</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Sources\BlockProg.h" />
+    <ClInclude Include="Sources\CrashFileNames.h" />
+    <ClInclude Include="Sources\DaumParam\DaumGameParameter.h" />
+    <ClInclude Include="Sources\ExceptionHandler.h" />
+    <ClInclude Include="Sources\ExLibs\BmpButton.h" />
+    <ClInclude Include="Sources\ExLibs\Bubble.h" />
+    <ClInclude Include="Sources\ExLibs\CheckListBoxLog.h" />
+    <ClInclude Include="Sources\ExLibs\CJFlatComboBox.h" />
+    <ClInclude Include="Sources\ExLibs\CoolDialogBar.h" />
+    <ClInclude Include="Sources\ExLibs\DIB.h" />
+    <ClInclude Include="Sources\ExLibs\DxControlFunc.h" />
+    <ClInclude Include="Sources\ExLibs\EtcFunction.h" />
+    <ClInclude Include="Sources\ExLibs\flatedit.h" />
+    <ClInclude Include="Sources\ExLibs\GetDxVer.h" />
+    <ClInclude Include="Sources\ExLibs\HyperlinkStatic.h" />
+    <ClInclude Include="Sources\ExLibs\MacButtons.h" />
+    <ClInclude Include="Sources\ExLibs\MacProgressCtrl.h" />
+    <ClInclude Include="Sources\ExLibs\memdc.h" />
+    <ClInclude Include="Sources\ExLibs\MultiSlider.h" />
+    <ClInclude Include="Sources\ExLibs\ReportCtrl.h" />
+    <ClInclude Include="Sources\ExLibs\Separator.h" />
+    <ClInclude Include="Sources\ExLibs\SoundSourceMan.h" />
+    <ClInclude Include="Sources\ExLibs\StColor.h" />
+    <ClInclude Include="Sources\ExLibs\ToolBarEx.h" />
+    <ClInclude Include="Sources\ExLibs\webbrowser2.h" />
+    <ClInclude Include="Sources\ExLibs\WusDV_Util.h" />
+    <ClInclude Include="Sources\GetWinVer.h" />
+    <ClInclude Include="Sources\HPro.h" />
+    <ClInclude Include="Sources\MinBugTrap.h" />
+    <ClInclude Include="Sources\MiniVersion.h" />
+    <ClInclude Include="Sources\RanFilter.h" />
+    <ClInclude Include="Sources\RanOnlineLanchClipboard\rol_clipboard.h" />
+    <ClInclude Include="Sources\RANPARAM.h" />
+    <ClInclude Include="Sources\RegFunction.h" />
+    <ClInclude Include="Sources\SimpleProcessAPI.h" />
+    <ClInclude Include="Sources\Slangfilter.h" />
+    <ClInclude Include="Sources\StopWatch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_RZ|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Sources\BlockProg.cpp" />
+    <ClCompile Include="Sources\DaumParam\DaumGameParameter.cpp" />
+    <ClCompile Include="Sources\ExceptionHandler.cpp" />
+    <ClCompile Include="Sources\ExLibs\BmpButton.cpp" />
+    <ClCompile Include="Sources\ExLibs\Bubble.cpp" />
+    <ClCompile Include="Sources\ExLibs\CheckListBoxLog.cpp" />
+    <ClCompile Include="Sources\ExLibs\CJFlatComboBox.cpp" />
+    <ClCompile Include="Sources\ExLibs\CoolDialogBar.cpp" />
+    <ClCompile Include="Sources\ExLibs\DIB.cpp" />
+    <ClCompile Include="Sources\ExLibs\DxControlFunc.cpp" />
+    <ClCompile Include="Sources\ExLibs\EtcFunction.cpp" />
+    <ClCompile Include="Sources\ExLibs\flatedit.cpp" />
+    <ClCompile Include="Sources\ExLibs\GetDxVer.cpp" />
+    <ClCompile Include="Sources\ExLibs\HyperlinkStatic.cpp" />
+    <ClCompile Include="Sources\ExLibs\MacButtons.cpp" />
+    <ClCompile Include="Sources\ExLibs\MacProgressCtrl.cpp" />
+    <ClCompile Include="Sources\ExLibs\memdc.cpp" />
+    <ClCompile Include="Sources\ExLibs\MultiSlider.cpp" />
+    <ClCompile Include="Sources\ExLibs\ReportCtrl.cpp" />
+    <ClCompile Include="Sources\ExLibs\Separator.cpp" />
+    <ClCompile Include="Sources\ExLibs\SoundSourceMan.cpp" />
+    <ClCompile Include="Sources\ExLibs\StColor.cpp" />
+    <ClCompile Include="Sources\ExLibs\ToolBarEx.cpp" />
+    <ClCompile Include="Sources\ExLibs\webbrowser2.cpp" />
+    <ClCompile Include="Sources\ExLibs\WusDV_Util.cpp" />
+    <ClCompile Include="Sources\GetWinVer.cpp" />
+    <ClCompile Include="Sources\HPro.cpp" />
+    <ClCompile Include="Sources\MinBugTrap.cpp" />
+    <ClCompile Include="Sources\MiniVersion.cpp" />
+    <ClCompile Include="Sources\RanFilter.cpp" />
+    <ClCompile Include="Sources\RanOnlineLanchClipboard\rol_clipboard.cpp" />
+    <ClCompile Include="Sources\RANPARAM.cpp" />
+    <ClCompile Include="Sources\RegFunction.cpp" />
+    <ClCompile Include="Sources\SimpleProcessAPI.cpp" />
+    <ClCompile Include="Sources\Slangfilter.cpp" />
+    <ClCompile Include="Sources\StopWatch.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

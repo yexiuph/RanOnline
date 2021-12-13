@@ -1,0 +1,705 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""[Tool]__LevelEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "[Tool]__LevelEditor.ico"
+
+IDR_LevelEditorTYPE     ICON                    "LevelEditorDoc.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "Toolbar.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_MENU_OPEN
+    BUTTON      ID_FILE_MENU_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_MENU_NONE
+    BUTTON      ID_EDIT_MENU_SELECT
+    BUTTON      ID_EDIT_MENU_MOVE
+    BUTTON      ID_EDIT_MENU_ROTATE
+    BUTTON      ID_EDIT_MENU_SCALE
+    BUTTON      ID_EDIT_MENU_SELECT_MOBSCH
+    SEPARATOR
+    BUTTON      ID_FILE_TOOLBAR_CAMTO
+    SEPARATOR
+    BUTTON      ID_FILE_TOOLBAR_SEP
+    SEPARATOR
+    BUTTON      ID_FILE_TOOLBAR_COMBOBOX
+    SEPARATOR
+    BUTTON      ID_FILE_TOOLBAR_ALL90
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File(F)"
+    BEGIN
+        MENUITEM "Open...\tCtrl+O(&O)",         ID_FILE_MENU_OPEN
+        MENUITEM "Save\tCtrl+S(&S)",            ID_FILE_MENU_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "Exit(&X)",                    ID_APP_EXIT
+    END
+    POPUP "Mouse(&M)"
+    BEGIN
+        MENUITEM "None(&N)",                    ID_EDIT_MENU_NONE
+        MENUITEM "Select(&C)",                  ID_EDIT_MENU_SELECT
+        MENUITEM "Move(&M)",                    ID_EDIT_MENU_MOVE
+        MENUITEM "Rotation(&R)",                ID_EDIT_MENU_ROTATE
+        MENUITEM "Size(&S)",                    ID_EDIT_MENU_SCALE
+        MENUITEM "Edit Box(&B)",                ID_EDIT_MENU_EDITBOX
+        MENUITEM "Select Mob Schedule(&K)",     ID_EDIT_MENU_SELECT_MOBSCH
+    END
+    POPUP "View(&V)"
+    BEGIN
+        MENUITEM "Tool Bar(&T)",                ID_VIEW_TOOLBAR
+        MENUITEM "Status Bar(&S)",              ID_VIEW_STATUS_BAR
+        MENUITEM "Fix camera to character(&H)", ID_VIEW_FIXCAMERATOCHARACTER
+        MENUITEM "Move character to select position(&C)", ID_VIEW_MOVECHARACTERTOSELECTPOSITION
+    END
+    POPUP "Help(&H)"
+    BEGIN
+        MENUITEM "About LevelEditor...(&A)",    ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About LevelEditor"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "LevelEditor Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2019",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_LEVEL_EDIT_DIALOG DIALOGEX 0, 0, 181, 516
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_COMBO_PAGE,7,6,167,441,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC_CONTROL,0,20,180,484
+END
+
+IDD_LEVEL_MAIN_PAGE DIALOGEX 0, 0, 179, 450
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Basic Page"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "File Name",IDC_BUTTON_FNAME,7,8,50,14
+    EDITTEXT        IDC_EDIT_FNAME,64,8,107,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "WLD File",IDC_BUTTON_WLDFILE,7,29,50,14
+    EDITTEXT        IDC_EDIT_WLDFILE,64,29,107,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Division\r\nDifference",IDC_STATIC,8,50,49,21
+    COMBOBOX        IDC_COMBO_DIV,64,51,53,85,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT_DIV,121,51,50,14,ES_AUTOHSCROLL | ES_READONLY,WS_EX_RIGHT
+    PUSHBUTTON      "Creation Quad Tree",IDC_BUTTON_CREATE_QTREE,7,73,164,14
+    CONTROL         "Render Quad Tree",IDC_CHECK_RENDER_QTREE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,94,75,10
+    CONTROL         "Display Crow Schedule",IDC_CHECK_SHOW_CROWSCHDL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,111,88,10
+END
+
+IDD_MOB_SET_PAGE DIALOGEX 0, 0, 179, 450
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Mob Setting Page"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Play",IDC_BUTTON_PLAY,3,2,84,14
+    PUSHBUTTON      "Stop",IDC_BUTTON_STOP,92,2,84,14
+    LTEXT           "Mob Copy",IDC_STATIC,3,21,33,8
+    EDITTEXT        IDC_EDIT_MOB_COPY,44,18,132,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Registered Mob List",IDC_STATIC,3,33,64,8
+    LISTBOX         IDC_LIST_MOB,3,42,173,71,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_BUTTON_MOB_NEW,3,115,50,14
+    PUSHBUTTON      "Edit",IDC_BUTTON_MOB_EDIT,65,115,50,14
+    PUSHBUTTON      "Delete",IDC_BUTTON_MOB_DEL,126,115,50,14
+    GROUPBOX        "Mob Attribute Edit",IDC_STATIC_EDIT_GROUP,4,130,172,187
+    PUSHBUTTON      "Group Name",IDC_BUTTON_GRP_NAME,7,139,58,14
+    EDITTEXT        IDC_EDIT_GROUP_NAME,71,139,100,14,ES_AUTOHSCROLL
+    CONTROL         "Leader Monster",IDC_CHECK_LEADER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,155,66,10
+    PUSHBUTTON      "Name ID",IDC_BUTTON_NAME_ID,7,166,58,14
+    EDITTEXT        IDC_EDIT_NAME_ID,71,166,100,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Crow ID",IDC_BUTTON_CROW_ID,7,182,58,14
+    EDITTEXT        IDC_EDIT_CROW_MID,71,182,47,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_CROW_SID,124,182,47,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Gen. Time",IDC_BUTTON_GEN_TIME,7,198,58,14
+    EDITTEXT        IDC_EDIT_GEN_TIME,71,198,100,14,ES_AUTOHSCROLL
+    CONTROL         "SUN",IDC_CHECK_SUNDAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,214,29,10
+    CONTROL         "MON",IDC_CHECK_MONDAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,40,214,31,10
+    CONTROL         "TUE",IDC_CHECK_TUESDAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,75,214,29,10
+    CONTROL         "WED",IDC_CHECK_WEDNESDAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,108,214,31,10
+    CONTROL         "THU",IDC_CHECK_THURSDAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,143,214,29,10
+    CONTROL         "FRI",IDC_CHECK_FRIDAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,224,27,10
+    CONTROL         "SAT",IDC_CHECK_SATURDAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,40,224,29,10
+    PUSHBUTTON      "Gen. Decide Time",IDC_BUTTON_GENDEC_TIME,7,235,58,14
+    EDITTEXT        IDC_EDIT_GEN_HOURS,71,235,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_GEN_MIN,124,235,47,14,ES_AUTOHSCROLL
+    CONTROL         "Random Position",IDC_CHECK_RAND_POS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,253,69,10
+    PUSHBUTTON      "Find Position",IDC_BUTTON_FIND_POS,91,251,80,14
+    LTEXT           "Num",IDC_STATIC_NUM,7,270,15,8
+    CONTROL         "",IDC_SPIN_NUM,"msctls_updown32",UDS_ARROWKEYS,27,267,11,14
+    EDITTEXT        IDC_EDIT_NUM,44,267,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Dist",IDC_STATIC_DIST,97,270,13,8
+    CONTROL         "",IDC_SPIN_DIST,"msctls_updown32",UDS_ARROWKEYS,116,267,10,14
+    EDITTEXT        IDC_EDIT_DIST,131,267,40,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Revival Gate",IDC_BUTTON_REV_GATE,7,283,58,14
+    EDITTEXT        IDC_EDIT_REV_GATE,71,283,100,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "BUS",IDC_BUTTON_BUS,7,299,58,14
+    EDITTEXT        IDC_EDIT_BUS,71,299,100,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Schedule Management",IDC_BUTTON_SCHDL_MAN,4,319,172,14
+    PUSHBUTTON      "OK",IDC_BUTTON_OK,4,335,76,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON_CANCEL,100,335,76,14
+END
+
+IDD_MOB_SCH_PAGE DIALOGEX 0, 0, 179, 450
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Mob Schedule Page"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Schedule Set Completion ",IDC_BUTTON_SCH_SET_COMPLET,4,4,171,14
+    LTEXT           "Schedule List",IDC_STATIC,4,22,42,8
+    LISTBOX         IDC_LIST_SCH,4,34,171,89,LBS_NOINTEGRALHEIGHT | LBS_WANTKEYBOARDINPUT | WS_VSCROLL | WS_TABSTOP,WS_EX_TRANSPARENT
+    PUSHBUTTON      "New",IDC_BUTTON_SCH_NEW,4,127,32,14
+    PUSHBUTTON      "Edit",IDC_BUTTONSCH_EDIT,50,127,32,14
+    PUSHBUTTON      "Move",IDC_BUTTONSCH_MOVE,97,127,32,14
+    PUSHBUTTON      "Delete",IDC_BUTTON_SCH_DEL,143,127,32,14
+    COMBOBOX        IDC_COMBO_SCH_ACT,4,145,171,167,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Delay Time",IDC_STATIC_DELAY_TIME,4,164,36,8
+    EDITTEXT        IDC_EDIT_SCH_DELAY_TIME,49,162,126,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDC_BUTTON_SCH_OK,4,181,50,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON_SCH_CANCEL,125,181,50,14
+END
+
+IDD_LAND_GATE_PAGE DIALOGEX 0, 0, 179, 450
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+CAPTION "Land Gate Page"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Registered Gate",IDC_STATIC,5,4,53,8
+    LISTBOX         IDC_LIST_LAND_GATE,5,16,169,96,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_BUTTON_LAND_GATE_NEW,5,116,50,14
+    PUSHBUTTON      "Edit",IDC_BUTTON_LAND_GATE_EDIT,65,116,50,14
+    PUSHBUTTON      "Delete",IDC_BUTTON_LAND_GATE_DEL,124,116,50,14
+    PUSHBUTTON      "Copy",IDC_BUTTON_LAND_GATE_COPY,5,134,50,14
+    CONTROL         "Gate Render",IDC_CHECK_LAND_GATE_REND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,65,137,57,10
+    EDITTEXT        IDC_EDIT_LAND_GATE_NAME,5,152,169,14,ES_AUTOHSCROLL
+    LTEXT           "Passing Attribute :",IDC_STATIC_ATTRB,5,171,60,8
+    CONTROL         "Out",IDC_CHECK_LAND_GATE_OUT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,68,171,28,10
+    CONTROL         "In",IDC_CHECK_LAND_GATE_IN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,131,171,23,10
+    LTEXT           "Gate ID :",IDC_STATIC_GATEID,5,188,30,8
+    EDITTEXT        IDC_EDIT_LAND_GATE_ID,68,185,106,14,ES_AUTOHSCROLL
+    LTEXT           "To Map ID :",IDC_STATIC_TOMAP_ID,5,206,38,8
+    EDITTEXT        IDC_EDIT_LAND_GATE_TOMAP_MID,68,203,50,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LAND_GATE_TOMAP_SID,124,203,50,14,ES_AUTOHSCROLL
+    LTEXT           "To Gate ID :",IDC_STATIC_TOGATE_ID,5,224,40,8
+    EDITTEXT        IDC_EDIT_LAND_GATE_TOGATE_ID,68,221,106,14,ES_AUTOHSCROLL
+    LTEXT           "Gen. Interval :",IDC_STATIC_GEN_INTER,5,241,48,8
+    EDITTEXT        IDC_EDIT_LAND_GATE_W,68,239,50,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LAND_GATE_H,124,239,50,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Apply",IDC_BUTTON_LAND_GATE_APPLY,5,257,50,14
+    PUSHBUTTON      "Register",IDC_BUTTON_LAND_GATE_REGIS,124,257,50,14
+END
+
+IDD_CROW_TREE_PAGE DIALOGEX 0, 0, 179, 450
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Crow Tree Page"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TREE_CROW,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,4,4,171,200,WS_EX_STATICEDGE
+    PUSHBUTTON      "OK",IDC_BUTTON_CROW_OK,4,209,50,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON_CROW_CANCEL,125,209,50,14
+END
+
+IDD_REQUIRE_PAGE DIALOGEX 0, 0, 179, 450
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Require Page"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CTEXT           "Area Penetration Condition",IDC_STATIC,4,4,171,11,0,WS_EX_CLIENTEDGE
+    CONTROL         "When the Party Members already penetrate, penetration possibility",IDC_CHECK_PENET_PARTY,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_DISABLED | WS_TABSTOP,4,19,171,16
+    PUSHBUTTON      "Level",IDC_BUTTON_PENET_LEVEL,4,42,171,14
+    EDITTEXT        IDC_EDIT_PENET_LEVEL_CON1,4,59,58,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_PENET_LEVEL_SIGN,70,59,40,94,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_PENET_LEVEL_CON2,117,59,58,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Item",IDC_BUTTON_PENET_ITEM,4,77,50,14
+    EDITTEXT        IDC_EDIT_PENET_ITEM_MID,58,77,23,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PENET_ITEM_SID,84,77,23,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PENET_ITEM_NAME,111,77,42,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "X",IDC_BUTTON_PENET_ITEM_DEL,158,77,17,14
+    PUSHBUTTON      "Skill",IDC_BUTTON_PENET_SKILL,4,95,50,14
+    EDITTEXT        IDC_EDIT_PENET_SKILL_MID,58,95,23,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PENET_SKILL_SID,84,95,23,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_PENET_SKILL_NAME,111,95,42,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "X",IDC_BUTTON_PENET_SKILL_DEL,158,95,17,14
+    PUSHBUTTON      "Comp. Quest",IDC_BUTTON_PENET_COMP_QUEST,4,113,50,14
+    EDITTEXT        IDC_EDIT_PENET_COMP_QUEST_NAME,58,113,95,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "X",IDC_BUTTON_PENET_COMP_QUEST_DEL,158,113,17,14
+    PUSHBUTTON      "Prog. Quest",IDC_BUTTON_PENET_PROG_QUEST,4,131,50,14
+    EDITTEXT        IDC_EDIT_PENET_PROG_QUEST_NAME,58,131,95,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "X",IDC_BUTTON_PENET_PROG_QUEST_DEL,158,131,17,14
+    PUSHBUTTON      "Living Point",IDC_BUTTON_PENET_LP,4,150,50,14
+    EDITTEXT        IDC_EDIT_PENET_LP_VAL,58,150,46,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "X",IDC_BUTTON__PENET_LP_DEL,158,150,17,14
+    COMBOBOX        IDC_COMBO_PENET_LP_SIGN,107,150,46,111,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Attribute",IDC_BUTTON_PENET_ATTR,4,168,50,14
+    EDITTEXT        IDC_EDIT_PENET_ATTR_VAL,58,168,46,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "X",IDC_BUTTON_PENET_ATTR_DEL,158,168,17,14
+    COMBOBOX        IDC_COMBO_PENET_ATTR_SIGN,107,168,46,113,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Save",IDC_BUTTON_PENET_SAVE,4,186,171,14
+END
+
+IDD_ITEM_TREE_PAGE DIALOGEX 0, 0, 179, 450
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Item Tree Page"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TREE_ITEM,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,4,4,171,200,WS_EX_STATICEDGE
+    PUSHBUTTON      "OK",IDC_BUTTON_ITEM_OK,4,209,50,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON_ITEM_CANCEL,125,209,50,14
+END
+
+IDD_SKILL_TREE_PAGE DIALOGEX 0, 0, 179, 450
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Skill Tree Page"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TREE_SKILL,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,4,4,171,200,WS_EX_STATICEDGE
+    PUSHBUTTON      "OK",IDC_BUTTON_SKILL_OK,4,209,50,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON_SKILL_CANCEL,125,209,50,14
+END
+
+IDD_GATE_LIST_PAGE DIALOGEX 0, 0, 179, 450
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Gate List Page"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LIST_GATE,4,4,171,152,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "OK",IDC_BUTTON_GATE_OK,4,161,50,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON_GATE_CANCEL,125,161,50,14
+END
+
+IDD_SINGLE_EFFECT_PAGE DIALOGEX 0, 0, 179, 450
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Single Effect Page"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LIST_SINGLE_EFF,4,4,171,128,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_BUTTON_SINGLE_EFF_NEW,4,136,50,14
+    PUSHBUTTON      "Edit",IDC_BUTTON_SINGLE_EFF_EDIT,65,136,50,14
+    PUSHBUTTON      "Delete",IDC_BUTTON_SINGLE_EFF_DEL,125,136,50,14
+    EDITTEXT        IDC_EDIT_SINGLE_EFF_NAME,4,155,171,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SINGLE_EFF_FNAME,4,173,111,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Find Effect",IDC_BUTTON_SINGLE_EFF_FIND,125,173,50,14
+    PUSHBUTTON      "Apply",IDC_BUTTON_SINGLE_EFF_APPLY,4,192,50,14
+    PUSHBUTTON      "Register",IDC_BUTTON_SINGLE_EFF_REGIS,125,192,50,14
+END
+
+IDD_LAND_MARK_PAGE DIALOGEX 0, 0, 179, 450
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Land Mark Page"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LIST_LAND_MARK,4,4,171,128,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_BUTTON_LAND_MARK_NEW,4,136,50,14
+    PUSHBUTTON      "Edit",IDC_BUTTON_LAND_MARK_EDIT,65,136,50,14
+    PUSHBUTTON      "Delete",IDC_BUTTON_LAND_MARK_DEL,125,136,50,14
+    EDITTEXT        IDC_EDIT_LAND_MARK_NAME,4,155,171,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Register",IDC_BUTTON_LAND_MARK_REGIS,125,174,50,14
+END
+
+IDD_ETC_FUNC_PAGE DIALOGEX 0, 0, 179, 450
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Etc Func Page"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Limit Time",IDC_STATIC,3,4,172,43
+    CONTROL         "Use Function",IDC_CHECK_LIMIT_TIME_USE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,15,57,10
+    LTEXT           "Max Time",IDC_STATIC,9,31,31,8
+    EDITTEXT        IDC_EDIT_LIMIT_TIME_MAX,43,28,26,14,ES_AUTOHSCROLL
+    LTEXT           "Min.",IDC_STATIC,74,31,14,8
+    LTEXT           "Tell Time",IDC_STATIC,91,31,28,8
+    EDITTEXT        IDC_EDIT_LIMIT_TELL_TIME,125,28,26,14,ES_AUTOHSCROLL
+    LTEXT           "Min.",IDC_STATIC,156,31,14,8
+    GROUPBOX        "Control Camera",IDC_STATIC,3,50,172,98
+    CONTROL         "Use Function",IDC_CHECK_CAM_USE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,60,57,10
+    LTEXT           "UP",IDC_STATIC,7,76,10,8
+    EDITTEXT        IDC_EDIT_CAM_UP,32,74,29,14,ES_AUTOHSCROLL
+    LTEXT           "DOWN",IDC_STATIC,7,95,22,8
+    EDITTEXT        IDC_EDIT_CAM_DOWN,32,92,29,14,ES_AUTOHSCROLL
+    LTEXT           "LEFT",IDC_STATIC,65,76,16,8
+    EDITTEXT        IDC_EDIT_CAM_LEFT,87,74,29,14,ES_AUTOHSCROLL
+    LTEXT           "RIGHT",IDC_STATIC,65,95,22,8
+    EDITTEXT        IDC_EDIT_CAM_RIGHT,87,92,29,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set Center Pos",IDC_BUTTON_CAM_SET_CENTER,10,111,74,14
+    CONTROL         "TEST",IDC_CHECK_CAM_TEST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,92,113,32,10
+    LTEXT           "Cam",IDC_STATIC,10,131,15,8
+    EDITTEXT        IDC_EDIT_CAM_X_VAL,29,128,26,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "x",IDC_STATIC,59,130,8,8
+    EDITTEXT        IDC_EDIT_CAM_Y_VAL,77,128,26,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "y",IDC_STATIC,107,130,8,8
+    EDITTEXT        IDC_EDIT_CAM_Z_VAL,126,128,26,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "z",IDC_STATIC,156,129,8,8
+    CONTROL         "Use Monster Chase Function",IDC_CHECK_ETC_FUNC_MON_CHASE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,3,151,107,10
+    GROUPBOX        "Land Effect",IDC_STATIC,3,162,172,155
+    CONTROL         "Use Function",IDC_CHECK_LAND_EFF_USE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,172,57,10
+    COMBOBOX        IDC_COMBO_LAND_EFF,9,282,161,156,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_LAND_EFF_VAL,9,298,67,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "ADD",IDC_BUTTON_LAND_EFF_ADD,89,298,38,14
+    PUSHBUTTON      "DEL",IDC_BUTTON_LAND_EFF_DEL,132,298,38,14
+    PUSHBUTTON      "Save",IDC_BUTTON_ETC_FUNC_SAVE,3,320,171,14
+    CONTROL         "",IDC_LIST_LAND_EFF,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,10,185,160,93
+    LTEXT           "FAR",IDC_STATIC,119,76,14,8
+    EDITTEXT        IDC_EDIT_CAM_FAR,141,74,29,14,ES_AUTOHSCROLL
+    LTEXT           "NEAR",IDC_STATIC,119,95,19,8
+    EDITTEXT        IDC_EDIT_CAM_NEAR,141,92,29,14,ES_AUTOHSCROLL
+END
+
+IDD_QUEST_DIALOG DIALOGEX 0, 0, 200, 250
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Quest Page"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LIST_QUEST,3,3,193,216,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "OK",IDC_BUTTON_QUEST_OK,3,227,50,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON_QUEST_CANCEL,146,227,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "LevelEditor.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "LevelEditor.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_LEVEL_EDIT_DIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_LEVEL_MAIN_PAGE, DIALOG
+    BEGIN
+    END
+
+    IDD_MOB_SCH_PAGE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_CROW_TREE_PAGE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_ITEM_TREE_PAGE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_SKILL_TREE_PAGE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 154
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+// IDR_MANIFEST            RT_MANIFEST             "[Tool]__LevelEditor.manifest"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "LevelEditor\n\nLevelEditor\n\n\nLevelEditor.Document\nLevelEditor.Document"
+    IDS_PROPSHT_CAPTION     "Sheet"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "LevelEditor"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "[Tool]__LevelEditor.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

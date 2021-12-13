@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\DaumParam">
+      <UniqueIdentifier>{88174dec-2548-448b-8ea8-9afd3b0536ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ExLibs">
+      <UniqueIdentifier>{f562a857-0537-43ad-b4f8-984517c67f90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RanOnlineLanchClipboard">
+      <UniqueIdentifier>{472c8845-e207-47b8-aeee-9e0529f9ea28}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\RanOnlineLanchClipboard\rol_clipboard.h">
+      <Filter>Source Files\RanOnlineLanchClipboard</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\BmpButton.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\Bubble.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\CheckListBoxLog.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\CJFlatComboBox.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\CoolDialogBar.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\DIB.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\DxControlFunc.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\EtcFunction.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\flatedit.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\GetDxVer.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\HyperlinkStatic.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\MacButtons.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\MacProgressCtrl.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\memdc.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\MultiSlider.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\ReportCtrl.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\Separator.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\SoundSourceMan.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\StColor.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\ToolBarEx.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\webbrowser2.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExLibs\WusDV_Util.h">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\DaumParam\DaumGameParameter.h">
+      <Filter>Source Files\DaumParam</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\BlockProg.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\CrashFileNames.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\ExceptionHandler.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GetWinVer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\HPro.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\MinBugTrap.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\MiniVersion.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\RanFilter.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\RANPARAM.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\RegFunction.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\SimpleProcessAPI.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\Slangfilter.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\StopWatch.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\RanOnlineLanchClipboard\rol_clipboard.cpp">
+      <Filter>Source Files\RanOnlineLanchClipboard</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\BmpButton.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\Bubble.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\CheckListBoxLog.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\CJFlatComboBox.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\CoolDialogBar.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\DIB.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\DxControlFunc.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\EtcFunction.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\flatedit.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\GetDxVer.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\HyperlinkStatic.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\MacButtons.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\MacProgressCtrl.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\memdc.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\MultiSlider.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\ReportCtrl.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\Separator.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\SoundSourceMan.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\StColor.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\ToolBarEx.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\webbrowser2.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExLibs\WusDV_Util.cpp">
+      <Filter>Source Files\ExLibs</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DaumParam\DaumGameParameter.cpp">
+      <Filter>Source Files\DaumParam</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BlockProg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ExceptionHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GetWinVer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\HPro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\MinBugTrap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\MiniVersion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\RanFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\RANPARAM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\RegFunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\SimpleProcessAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Slangfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\StopWatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
