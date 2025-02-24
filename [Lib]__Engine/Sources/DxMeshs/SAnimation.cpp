@@ -682,10 +682,11 @@ SAnimContainer::SAnimContainer() :
 
 SAnimContainer::~SAnimContainer()
 {
-	std::for_each( m_listAnimation.begin(), m_listAnimation.end(), std_afunc::DeleteObject() );
+	// C++ 20 Standards Update : std::ranges::for_each over std::for_each - YeXiuPH
+	std::ranges::for_each(m_listAnimation, std_afunc::DeleteObject());
 	m_listAnimation.clear();
 
-	std::for_each( m_listAniUPBODY.begin(), m_listAniUPBODY.end(), std_afunc::DeleteObject() );
+	std::ranges::for_each(m_listAniUPBODY, std_afunc::DeleteObject());
 	m_listAniUPBODY.clear();
 }
 
@@ -731,10 +732,11 @@ HRESULT SAnimContainer::CreateAnimationData ( SANIMCONINFO &sAnimInfo, LPDIRECT3
 	m_bLOAD = true;
 	m_bVALID = true;
 
-	std::for_each( m_listAnimation.begin(), m_listAnimation.end(), std_afunc::DeleteObject() );
+	// C++ 20 Standards Update : std::ranges::for_each over std::for_each - YeXiuPH
+	std::ranges::for_each(m_listAnimation, std_afunc::DeleteObject());
 	m_listAnimation.clear();
 
-	std::for_each( m_listAniUPBODY.begin(), m_listAniUPBODY.end(), std_afunc::DeleteObject() );
+	std::ranges::for_each(m_listAniUPBODY, std_afunc::DeleteObject());
 	m_listAniUPBODY.clear();
 
 	LPDIRECTXFILE pxofapi = NULL;
@@ -1303,14 +1305,13 @@ bool SAnimContainer::UpdateMix ( float fCurMixTime )
 
 	if ( m_bVALID )
 	{
-		std::for_each(m_listAniUPBODY.begin(),m_listAniUPBODY.end(),std::bind2nd(std::mem_fun(&SAnimation::SetMix),fCurMixTime));
-		std::for_each(m_listAnimation.begin(),m_listAnimation.end(),std::bind2nd(std::mem_fun(&SAnimation::SetMix),fCurMixTime));
+		//std::for_each(m_listAniUPBODY.begin(),m_listAniUPBODY.end(),std::bind2nd(std::mem_fun(&SAnimation::SetMix),fCurMixTime));
+		//std::for_each(m_listAnimation.begin(),m_listAnimation.end(),std::bind2nd(std::mem_fun(&SAnimation::SetMix),fCurMixTime));
 
-		//SANILIST_ITER iter = m_listAnimation.begin();
-		//for( ; iter!=m_listAnimation.end(); ++iter )
-		//{
-		//	(*iter)->SetTime( fCurTime, fWeight, bFirst );
-		//}
+		// C++ 20 Standards Update : bind2nd and mem_fun deprecation - YeXiuPH
+		std::ranges::for_each(m_listAniUPBODY, [fCurMixTime](SAnimation* anim) { anim->SetMix(fCurMixTime); });
+		std::ranges::for_each(m_listAnimation, [fCurMixTime](SAnimation* anim) { anim->SetMix(fCurMixTime); });
+
 		return true;
 	}
 

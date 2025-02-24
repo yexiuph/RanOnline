@@ -1,5 +1,7 @@
 #pragma once
 
+#include <random>
+
 namespace seqrandom
 {
 	BOOL init ( WORD wdetail=4, WORD wcopy=4 );

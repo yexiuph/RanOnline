@@ -352,7 +352,8 @@ BOOL DxSkinCharData::LoadFile ( const char* szFile, LPDIRECT3DDEVICEQ pd3dDevice
 	StringCchCopy( szPathName, MAX_PATH, DxSkinCharDataContainer::GetInstance().GetPath() );
 	StringCchCat( szPathName, MAX_PATH, szFile );
 
-	std::auto_ptr<basestream> pBStream( GLOGIC::openfile_basestream(GLOGIC::bENGLIB_ZIPFILE, 
+	// C++ 20 Standards Update : Auto PTR -> Unqiue Ptr - YeXiuPH
+	std::unique_ptr<basestream> pBStream( GLOGIC::openfile_basestream(GLOGIC::bENGLIB_ZIPFILE, 
 																	GLOGIC::strSKINOBJ_ZIPFILE.c_str(), 
 																	szPathName, 
 																	szFile ) );

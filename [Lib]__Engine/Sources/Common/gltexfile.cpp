@@ -35,7 +35,8 @@ bool gltexfile::open ( const std::string strFile, bool bDEC, BOOL bPack )
 	_splitpath_s( m_strFileName.c_str(), NULL, 0, NULL, 0, fname, _MAX_FNAME, ext, _MAX_EXT );
 	StringCchCat( fname, _MAX_FNAME, ext );
 
-	std::auto_ptr<CBaseString> pBString( GLOGIC::openfile_basestring(	m_bZipFile, 
+	// C++ 20 Standards Update : Auto PTR -> Unqiue Ptr - YeXiuPH
+	std::unique_ptr<CBaseString> pBString( GLOGIC::openfile_basestring(	m_bZipFile, 
 																		m_strZipFileName.c_str(),
 																		m_strFileName.c_str(), 
 																		fname, 

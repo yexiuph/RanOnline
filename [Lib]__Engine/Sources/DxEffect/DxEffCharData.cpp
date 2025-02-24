@@ -208,7 +208,8 @@ BOOL DxEffCharData::LoadFile ( const char* szFile )
 	strPathName = DxEffcharDataMan::GetInstance().GetPath ();
 	strPathName += szFile;
 
-	std::auto_ptr<basestream> pBStream( GLOGIC::openfile_basestream(GLOGIC::bENGLIB_ZIPFILE, 
+	// C++ 20 Standards Update : Auto PTR -> Unqiue Ptr - YeXiuPH
+	std::unique_ptr<basestream> pBStream( GLOGIC::openfile_basestream(GLOGIC::bENGLIB_ZIPFILE, 
 																	GLOGIC::strEFFECT_CHAR_ZIPFILE.c_str(),
 																	strPathName.c_str(), 
 																	szFile ) );
@@ -324,7 +325,8 @@ BOOL DxEffCharDataArray::LoadFile ( const char* szFile )
 	strPathName = DxEffcharDataMan::GetInstance().GetPath ();
 	strPathName += szFile;
 
-	std::auto_ptr<basestream> pBStream( GLOGIC::openfile_basestream(GLOGIC::bENGLIB_ZIPFILE, 
+	// C++ 20 Standards Update : Auto PTR -> Unqiue Ptr - YeXiuPH
+	std::unique_ptr<basestream> pBStream( GLOGIC::openfile_basestream(GLOGIC::bENGLIB_ZIPFILE, 
 																	GLOGIC::strEFFECT_CHAR_ZIPFILE.c_str(),
 																	strPathName.c_str(), 
 																	szFile ) );

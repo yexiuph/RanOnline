@@ -5,6 +5,7 @@
 #define new DEBUG_NEW
 #endif
 
+
 namespace seqrandom
 {
 	WORD				n_wDetail = 0;
@@ -12,22 +13,28 @@ namespace seqrandom
 	WORD				n_wIterate = 0;
 	std::vector<WORD>	n_vecBuffer;
 
-	BOOL init ( WORD wdetail, WORD wcopy )
-	{
-		n_vecBuffer.clear ();
+    BOOL init(WORD wdetail, WORD wcopy)
+    {
+        n_vecBuffer.clear();
 
-		n_wDetail = wdetail;
-		WORD wMax = (WORD) powf(10.0f,n_wDetail);
+        n_wDetail = wdetail;
+        WORD wMax = static_cast<WORD>(powf(10.0f, n_wDetail));
 
-		for ( WORD c=0; c<wcopy; ++c )
-		{
-			for ( WORD i=0; i<wMax; ++i )		n_vecBuffer.push_back(i);
-		}
+        for (WORD c = 0; c < wcopy; ++c)
+        {
+            for (WORD i = 0; i < wMax; ++i)
+            {
+                n_vecBuffer.push_back(i);
+            }
+        }
 
-		std::random_shuffle ( n_vecBuffer.begin(), n_vecBuffer.end() );
+        // Create a random number generator and shuffle the vector.
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::shuffle(n_vecBuffer.begin(), n_vecBuffer.end(), gen);
 
-		return TRUE;
-	}
+        return TRUE;
+    }
 
 	WORD get ()
 	{

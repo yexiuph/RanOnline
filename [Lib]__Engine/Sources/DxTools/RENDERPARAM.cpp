@@ -43,74 +43,105 @@ namespace RENDERPARAM
 	BOOL	bRENDER_WORLD = TRUE;
 	BOOL	bRENDER_PIECE = TRUE;
 
-	// MMX 제공하는지 체크
-	bool isMMXSupported() 
-	{ 
-		int fSupported; 
 
-		__asm 
-		{ 
-		mov eax,1 // CPUID level 1 
-		cpuid  // EDX = feature flag 
-		and edx,0x800000 // test bit 23 of feature flag 
-		mov fSupported,edx // != 0 if MMX is supported 
-		} 
+// X64 Architecture Support : ASM to C++ - YeXiuPH
+#ifdef _M_X64
+	bool isMMXSupported()
+	{
+		int cpuInfo[4] = { 0 };
+		__cpuid(cpuInfo, 1);
 
-		if(fSupported != 0)
+		return (cpuInfo[3] & (1 << 23)) != 0;
+	}
+
+	bool isISSESupported()
+	{
+		int cpuInfo[4] = { 0 };
+		__cpuid(cpuInfo, 1);
+
+		bool sseSupported = (cpuInfo[3] & (1 << 25)) != 0;
+
+		int extCpuInfo[4] = { 0 };
+		__cpuid(extCpuInfo, 0x80000000);
+
+		if (extCpuInfo[0] >= 0x80000001)
 		{
-			return true; 
+			__cpuid(extCpuInfo, 0x80000001);
+			sseSupported |= (extCpuInfo[3] & (1 << 22)) != 0;
 		}
-		else 
+
+		return sseSupported;
+	}
+#else
+		// MMX 제공하는지 체크
+	bool isMMXSupported()
+	{
+		int fSupported;
+
+		__asm
 		{
-			return false; 
+			mov eax, 1 // CPUID level 1 
+			cpuid  // EDX = feature flag 
+			and edx, 0x800000 // test bit 23 of feature flag 
+			mov fSupported, edx // != 0 if MMX is supported 
 		}
-	} 
+
+		if (fSupported != 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 
 	// SSE 제공하는지 체크
-	bool isISSESupported() 
-	{ 
-		int processor; 
-		int features; 
-		int ext_features = 0; 
+	bool isISSESupported()
+	{
+		int processor;
+		int features;
+		int ext_features = 0;
 
-		__asm 
-		{ 
-			pusha 
-			mov eax,1 
-			cpuid 
-			mov processor,eax     // Store processor family/model/step 
-			mov features,edx      // Store features bits 
+		__asm
+		{
+			pusha
+			mov eax, 1
+			cpuid
+			mov processor, eax     // Store processor family/model/step 
+			mov features, edx      // Store features bits 
 
-			mov eax,080000000h 
-			cpuid 
+			mov eax, 080000000h
+			cpuid
 			// Check which extended functions can be called 
-			cmp eax,080000001h      // Extended Feature Bits 
+			cmp eax, 080000001h      // Extended Feature Bits 
 			jb  no_features         // jump if not supported 
 
-			mov eax,080000001h      // Select function 0x80000001 
-			cpuid 
-			mov ext_features,edx  // Store extended features bits 
+			mov eax, 080000001h      // Select function 0x80000001 
+			cpuid
+			mov ext_features, edx  // Store extended features bits 
 
-		no_features: 
-			popa 
-		} 
-
-		if (((features >> 25) & 1) != 0) 
-		{
-			return true; 
+			no_features :
+			popa
 		}
-		else 
+
+		if (((features >> 25) & 1) != 0)
 		{
-			if (((ext_features >> 22) & 1) != 0) 
+			return true;
+		}
+		else
+		{
+			if (((ext_features >> 22) & 1) != 0)
 			{
-				return true; 
+				return true;
 			}
-			else 
+			else
 			{
-				return false; 
+				return false;
 			}
 		}
 	}
+#endif
 
 	void DeviceCheck( LPDIRECT3DDEVICEQ pd3dDevice )
 	{

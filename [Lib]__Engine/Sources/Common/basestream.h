@@ -96,13 +96,17 @@ public:
 	virtual BOOL operator << ( char Value ){CALLERROR; return TRUE;}
 
 	virtual BOOL operator << ( bool Value ){CALLERROR; return TRUE;}
+// X64 Architecture Support : Operator Update - YeXiuPH
+#ifdef _M_X64
+	virtual BOOL operator << (uint64_t Value) { CALLERROR; return TRUE; }
+#endif
 
 	virtual BOOL operator << ( const std::string &str ){CALLERROR;return TRUE;}
 
 	template<typename TYPE>
 		BOOL operator << ( const std::vector<TYPE> &vecVALUE );
 
-	virtual BOOL WriteBuffer ( const void* pBuffer, DWORD Size ){CALLERROR;return TRUE;}
+	virtual BOOL WriteBuffer(const void* pBuffer, DWORD Size) { CALLERROR; return TRUE; }
 
 // ------- 불러오기.
 public:
@@ -121,6 +125,11 @@ public:
 
 	virtual BOOL operator >> ( BYTE &Value ) = 0;
 	virtual BOOL operator >> ( char &Value ) = 0;
+
+// X64 Architecture Support : Operator Update - YeXiuPH
+#ifdef _M_X64
+	virtual BOOL operator >> (uint64_t &Value) = 0;
+#endif
 
 	virtual BOOL operator >> ( bool &Value ) = 0;
 

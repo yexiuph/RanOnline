@@ -121,7 +121,7 @@ HRESULT DxFrameMesh::LoadMeshHierarchy ( LPDIRECT3DDEVICEQ pd3dDevice )
         goto e_Exit;
     }
 
-	int nStrLen = strlen(__DXFRAMEROOT)+1;
+	int nStrLen = static_cast<int>(strlen(__DXFRAMEROOT)+1);
 	m_pDxFrame->szName = new char[nStrLen];
 	StringCchCopy( m_pDxFrame->szName, nStrLen, __DXFRAMEROOT );
 	
@@ -195,10 +195,10 @@ HRESULT DxFrameMesh::LoadFrames ( LPD3DXFILEDATA pxofobjCur, DWORD fvf,
     LPD3DXFILEDATA pxofobjChild = NULL;
 
     GUID type;
-    DWORD cbSize;
+    SIZE_T cbSize;
     D3DXMATRIX *pmatNew;
     DxFrame *pframeCur;
-    DWORD cchName;
+    SIZE_T cchName;
     
     //	Note : 오브젝트의 타입.
 	//
@@ -219,7 +219,7 @@ HRESULT DxFrameMesh::LoadFrames ( LPD3DXFILEDATA pxofobjCur, DWORD fvf,
 				SAFE_DELETE_ARRAY(pframeParent->szName);
 
 				char szMesh[] = "[Mesh]";
-				int nStrLen = strlen(pframe->szName)+strlen(szMesh)+1;
+				int nStrLen = static_cast<int>(strlen(pframe->szName)+strlen(szMesh)+1);
 				pframeParent->szName = new char[nStrLen];
 				memset( pframeParent->szName, 0, sizeof(char)*nStrLen );
 
@@ -358,7 +358,7 @@ HRESULT DxFrameMesh::LoadMesh ( LPD3DXFILEDATA pxofobjCur, DWORD fvf,
 	LPD3DXBUFFER pbufMaterials = NULL;
 	LPD3DXBUFFER pbufAdjacency = NULL;
     
-	DWORD cchName;
+	SIZE_T cchName;
 	UINT iMaterial;
     
 	//	Note : 메쉬 콘데이너 생성.
@@ -580,12 +580,12 @@ HRESULT DxFrameMesh::LoadAnimation ( LPD3DXFILEDATA pxofobjCur, DWORD fvf,
 	LPD3DXFILEDATA pxofobjChild = NULL;
     GUID type;
     
-	DWORD dwSize;
+	SIZE_T dwSize;
     PBYTE pData;
     DWORD dwKeyType;
     DWORD cKeys;
     DWORD iKey;
-    DWORD cchName;
+    SIZE_T cchName;
     char *szFrameName;
     
 	//	Note : 새로운 프레임 만듬. - Animation.
@@ -657,7 +657,7 @@ HRESULT DxFrameMesh::LoadAnimation ( LPD3DXFILEDATA pxofobjCur, DWORD fvf,
 
 			if( szFrameName )
 			{
-				int nStrLen = strlen(szFrameName)+1;
+				int nStrLen = static_cast<int>(strlen(szFrameName)+1);
 				pAnimCur->szName = new char[nStrLen];
 				StringCchCopy( pAnimCur->szName, nStrLen, szFrameName );
 				pAnimCur->pframeToAnimate->pframeFromAnimate = pAnimCur;
@@ -1156,7 +1156,7 @@ void DxFrameMesh::SetFile ( const char *szFileName )
 
 	if( !szFileName )	return;
 	
-	int nStrLen = strlen(szFileName)+1;
+	int nStrLen = static_cast<int>(strlen(szFileName)+1);
 	m_pszFileName = new char[nStrLen];
 	StringCchCopy( m_pszFileName, nStrLen, szFileName );
 }

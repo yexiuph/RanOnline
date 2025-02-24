@@ -35,7 +35,10 @@ public:
 
 	virtual BOOL operator << ( bool Value );
 
-	virtual BOOL operator << ( __int64 Value );
+// X64 Architecture Support : Operator Update - YeXiuPH
+#ifdef _M_X64
+	virtual BOOL operator << (uint64_t Value);
+#endif
 
 	template<typename TYPE>
 	BOOL operator << ( const std::vector<TYPE> &vecVALUE );
@@ -62,7 +65,10 @@ public:
 
 	virtual BOOL operator >> ( bool &Value );
 
-	virtual BOOL operator >> ( __int64 &Value );
+// X64 Architecture Support : Operator Update - YeXiuPH
+#ifdef _M_X64
+	virtual BOOL operator >> (uint64_t &Value );
+#endif
 
 	template<typename TYPE>
 	BOOL operator >> ( std::vector<TYPE> &vecVALUE );
@@ -198,11 +204,14 @@ inline BOOL CByteStream::operator << ( bool Value )
 	return TRUE;
 }
 
-inline BOOL CByteStream::operator << ( __int64 Value )
+// X64 Architecture Support : Operator Update - YeXiuPH
+#ifdef _M_X64
+inline BOOL CByteStream::operator << (uint64_t Value )
 {
 	m_Buffer.insert ( m_Buffer.end(), LPBYTE(&Value), LPBYTE(&Value) + sizeof(Value) );
 	return TRUE;
 }
+#endif
 
 inline BOOL CByteStream::operator << ( const std::string &str )
 {
@@ -373,7 +382,9 @@ inline BOOL CByteStream::operator >> ( bool &Value )
 	return TRUE;
 }
 
-inline BOOL CByteStream::operator >> ( __int64 &Value )
+// X64 Architecture Support : Operator Update - YeXiuPH|
+#ifdef _M_X64
+inline BOOL CByteStream::operator >> ( uint64_t &Value )
 {
 	int sizeBuff = (int)(m_Buffer.end() - (m_Buffer.begin()+m_dwIter));
 	GASSERT ( sizeof(Value)<=sizeBuff );
@@ -384,6 +395,7 @@ inline BOOL CByteStream::operator >> ( __int64 &Value )
 
 	return TRUE;
 }
+#endif
 
 inline BOOL CByteStream::operator >> ( std::string &str )
 {

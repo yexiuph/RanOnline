@@ -69,29 +69,49 @@ namespace CDebugSet
 
 namespace CLOCKCHECK
 {
+// X64 Architecture Support : ASM to C++ - YeXiuPH
+#ifdef _M_X64 // Check if compiling for x64
+	extern unsigned __int64 startTimerTick; // Definition
+	extern unsigned __int64 endTimerTick;   // Definition
+
+	inline void CLOCKCHK_ST()
+	{
+		startTimerTick = __rdtsc();
+	}
+
+	inline void CLOCKCHK_ED(uint64_t& dwHigh, uint64_t& dwLow)
+	{
+		endTimerTick = __rdtsc();
+		uint64_t elapsed = endTimerTick - startTimerTick;
+		dwHigh = elapsed >> 32;
+		dwLow = elapsed & 0xFFFFFFFF;
+	}
+
+#else // If compiling for x86
 	extern DWORD dwShi, dwSlo, dwEhi, dwElo;
-	inline void CLOCKCHK_ST ()
+	inline void CLOCKCHK_ST()
 	{
 		__asm
 		{
-			rdtsc                      ;클럭카운트를 edx:eax레지스터에 저장
-			mov     dwShi, edx       ;상위 dword 메모리에 백업
-			mov     dwSlo, eax       ;하위 dword 메모리에 백업       
+			rdtsc
+			mov     dwShi, edx
+			mov     dwSlo, eax
 		}
 	}
 
-	inline void CLOCKCHK_ED ( DWORD &dwHigh, DWORD &dwLow )
+	inline void CLOCKCHK_ED(DWORD& dwHigh, DWORD& dwLow)
 	{
 		__asm
 		{
-			rdtsc                      ; 클럭카운트를 edx:eax레지스터에 저장
-			mov     dwElo, eax       ; 하위 dword 값 저장
-			mov     dwEhi, edx       ; 상위 dword값 저장
+			rdtsc
+			mov     dwElo, eax
+			mov     dwEhi, edx
 		}
 
 		dwHigh = dwEhi - dwShi;
 		dwLow = dwElo - dwSlo;
 	}
+#endif
 };
 
 #endif	//	__C_DEBUGSET__

@@ -27,7 +27,9 @@ BOOL SANIMCONINFO::LoadFile ( const char *szFileName, LPDIRECT3DDEVICEQ pd3dDevi
 	StringCchCopy( szFilePath, MAX_PATH, DxSkinAniMan::GetInstance().GetPath() );
 	StringCchCat( szFilePath, MAX_PATH, szFileName );
 
-	std::auto_ptr<basestream> pBStream( GLOGIC::openfile_basestream(GLOGIC::bENGLIB_ZIPFILE, 
+
+	// C++ 20 Standards Update : Auto PTR -> Unqiue Ptr - YeXiuPH
+	std::unique_ptr<basestream> pBStream( GLOGIC::openfile_basestream(GLOGIC::bENGLIB_ZIPFILE, 
 																	GLOGIC::strANIMATION_ZIPFILE.c_str(),
 																	szFilePath, 
 																	szFileName ) );

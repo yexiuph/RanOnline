@@ -67,6 +67,11 @@ public:
 
 	virtual BOOL operator >> ( bool &Value );
 
+// X64 Architecture Support : Operator Update - YeXiuPH
+#ifdef _M_X64
+	virtual BOOL operator >> (uint64_t& Value);
+#endif
+
 	template<typename TYPE>
 	BOOL operator >> ( std::vector<TYPE> &vecVALUE );
 

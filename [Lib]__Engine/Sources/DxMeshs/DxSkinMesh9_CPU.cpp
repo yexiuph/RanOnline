@@ -105,7 +105,91 @@ VS_OUTPUT VShade(VS_INPUT i, uniform int NumBones)
 void DxSkinMesh9_CPU::PhysiqueTransform_SSE( VERTEX* pResult, BYTE* pBoneVertex, DWORD dwBoneSize, DWORD dwVertexNum, D3DXMATRIXA16* pAniMatrix )
 {
 	DWORD	  dwResultSize = sizeof(VERTEX);
+// X64 Architecture Support : ASM to C++ - YeXiuPH
+#ifdef _M_X64
+	BYTE* pBoneData = pBoneVertex;
+	VERTEX* pOut = pResult;
+	for (DWORD v = 0; v < dwVertexNum; v++)
+	{
+		// --- Process Position ---
+		__m128 posX = _mm_load_ss((float*)(pBoneData + 0x00));
+		__m128 posY = _mm_load_ss((float*)(pBoneData + 0x04));
+		__m128 posZ = _mm_load_ss((float*)(pBoneData + 0x8));
 
+		posX = _mm_shuffle_ps(posX, posX, 0x00);
+		posY = _mm_shuffle_ps(posY, posY, 0x00);
+		posZ = _mm_shuffle_ps(posZ, posZ, 0x00);
+		__m128 accumPos = _mm_setzero_ps();
+
+		DWORD influenceCount = *(DWORD*)(pBoneData + 0x18);
+		for (DWORD i = 0; i < influenceCount; i++)
+		{
+			DWORD boneIndex = *(DWORD*)(pBoneData + 0x1C + i * 8);
+
+			BYTE* pMat = (BYTE*)pAniMatrix + (boneIndex * 0x40);
+
+			__m128 row0 = _mm_load_ps((float*)(pMat + 0x00));
+			__m128 row1 = _mm_load_ps((float*)(pMat + 0x10));
+			__m128 row2 = _mm_load_ps((float*)(pMat + 0x20));
+			__m128 row3 = _mm_load_ps((float*)(pMat + 0x30));
+
+			__m128 mult0 = _mm_mul_ps(row0, posX);
+			__m128 mult1 = _mm_mul_ps(row1, posY);
+			__m128 mult2 = _mm_mul_ps(row2, posZ);
+
+			__m128 sum01 = _mm_add_ps(mult0, mult1);
+			__m128 sum23 = _mm_add_ps(mult2, row3);
+			__m128 transformed = _mm_add_ps(sum01, sum23);
+
+			__m128 weight = _mm_load_ss((float*)(pBoneData + 0x20 + i * 8));
+			weight = _mm_shuffle_ps(weight, weight, 0x00);
+
+			accumPos = _mm_add_ps(accumPos, _mm_mul_ps(transformed, weight));
+		}
+
+		_mm_storeu_ps((float*)pOut, accumPos);
+
+		// --- Process Normal ---
+		__m128 normX = _mm_load_ss((float*)(pBoneData + 0x0C));
+		__m128 normY = _mm_load_ss((float*)(pBoneData + 0x10));
+		__m128 normZ = _mm_load_ss((float*)(pBoneData + 0x14));
+		normX = _mm_shuffle_ps(normX, normX, 0x00);
+		normY = _mm_shuffle_ps(normY, normY, 0x00);
+		normZ = _mm_shuffle_ps(normZ, normZ, 0x00);
+		__m128 accumNorm = _mm_setzero_ps();
+
+		for (DWORD i = 0; i < influenceCount; i++)
+		{
+			DWORD boneIndex = *(DWORD*)(pBoneData + 0x1C + i * 8);
+			BYTE* pMat = (BYTE*)pAniMatrix + (boneIndex * 0x40);
+
+			// For normals, use only the 3x3 part: load row0, row1, row2
+			__m128 row0 = _mm_load_ps((float*)(pMat + 0x00));
+			__m128 row1 = _mm_load_ps((float*)(pMat + 0x10));
+			__m128 row2 = _mm_load_ps((float*)(pMat + 0x20));
+
+			__m128 mult0 = _mm_mul_ps(row0, normX);
+			__m128 mult1 = _mm_mul_ps(row1, normY);
+			__m128 mult2 = _mm_mul_ps(row2, normZ);
+			__m128 sum = _mm_add_ps(_mm_add_ps(mult0, mult1), mult2);
+
+			__m128 weight = _mm_load_ss((float*)(pBoneData + 0x20 + i * 8));
+			weight = _mm_shuffle_ps(weight, weight, 0x00);
+			accumNorm = _mm_add_ps(accumNorm, _mm_mul_ps(sum, weight));
+		}
+
+		_mm_storeu_ps(((float*)pOut) + 3, accumNorm);
+
+		DWORD extra1 = *(DWORD*)(pBoneData - 8);
+		DWORD extra2 = *(DWORD*)(pBoneData - 4);
+		*(DWORD*)((BYTE*)pOut + 0x18) = extra1;
+		*(DWORD*)((BYTE*)pOut + 0x1C) = extra2;
+
+		// Advance pointers for next vertex
+		pBoneData += dwBoneSize;
+		pOut = (VERTEX*)((BYTE*)pOut + dwResultSize);
+	}
+#else
 	__asm
 	{
 		mov		   	   esi,	   pBoneVertex		   	   	   // esi <- 버텍스와 본정보가 들어있는 구조체 포인터 세팅
@@ -227,6 +311,7 @@ void DxSkinMesh9_CPU::PhysiqueTransform_SSE( VERTEX* pResult, BYTE* pBoneVertex,
 		dec		   	   ecx		   	   	   	   	   	   	   	   // 버텍스수만큼 루프
 		jnz		   	   PHYSIQUETRANSFORM	  	   	   	   	   // (카운터에서 1을 빼주고 남아있으면 다시 루프)
 	}
+#endif
 }
 
 void DxSkinMesh9_CPU::UpdateSkinnedMesh_0( VERTEX* pDest, BYTE* pSrcIN, D3DXMATRIXA16* pBoneMatrices, DWORD dwStart, DWORD dwNumVertices )
@@ -1344,6 +1429,44 @@ void DxSkinMesh9_CPU::LoadLOD( CSerialFile& SFile, IDirect3DDevice9 *pd3dDevice 
 }
 
 
+// X64 Architecture Support : ASM to C++
+#ifdef _M_X64
+
+void SMatrix4_SSE::mul(const SMatrix4_SSE& left, const SMatrix4_SSE& right) {
+	float* fDst = m;
+	const float* fSrc1 = left.m;
+	const float* fSrc2 = right.m;
+
+	__m128 row1 = _mm_load_ps(&fSrc1[0]);
+	__m128 row2 = _mm_load_ps(&fSrc1[4]);
+	__m128 row3 = _mm_load_ps(&fSrc1[8]);
+	__m128 row4 = _mm_load_ps(&fSrc1[12]);
+
+	for (int i = 0; i < 4; ++i) {
+		__m128 col = _mm_load_ps(&fSrc2[i * 4]);
+		__m128 res = _mm_mul_ps(row1, _mm_shuffle_ps(col, col, 0x00));
+		res = _mm_add_ps(res, _mm_mul_ps(row2, _mm_shuffle_ps(col, col, 0x55)));
+		res = _mm_add_ps(res, _mm_mul_ps(row3, _mm_shuffle_ps(col, col, 0xAA)));
+		res = _mm_add_ps(res, _mm_mul_ps(row4, _mm_shuffle_ps(col, col, 0xFF)));
+		_mm_store_ps(&fDst[i * 4], res);
+	}
+}
+
+void SMatrix4_SSE::add(const SMatrix4_SSE& left, const SMatrix4_SSE& right) 
+{
+	float* fDst = m;
+	const float* fSrc1 = left.m;
+	const float* fSrc2 = right.m;
+
+	_mm_store_ps(&fDst[0], _mm_add_ps(_mm_load_ps(&fSrc1[0]), _mm_load_ps(&fSrc2[0])));
+	_mm_store_ps(&fDst[4], _mm_add_ps(_mm_load_ps(&fSrc1[4]), _mm_load_ps(&fSrc2[4])));
+	_mm_store_ps(&fDst[8], _mm_add_ps(_mm_load_ps(&fSrc1[8]), _mm_load_ps(&fSrc2[8])));
+	_mm_store_ps(&fDst[12], _mm_add_ps(_mm_load_ps(&fSrc1[12]), _mm_load_ps(&fSrc2[12])));
+}
+
+#else
+
+
 void SMatrix4_SSE::mul(const SMatrix4_SSE& left, const SMatrix4_SSE& right)
 {
 	      float*	    	      fDst	  = m;
@@ -1501,6 +1624,4 @@ void SMatrix4_SSE::add(const SMatrix4_SSE& left, const SMatrix4_SSE& right)
 		movntps	   xmmword ptr [eax + 0x30], xmm3
 	}
 }
-
-
-
+#endif

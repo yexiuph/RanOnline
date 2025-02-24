@@ -96,21 +96,6 @@ BOOL CSerialFile::OpenFile ( const FOPENTYPE _Type, const char *_szFileName, boo
 	case FOT_READ:
 		fopen_s(&m_FileStream, m_szFileName, "rb");
 		if ( !m_FileStream ) break;
-		
-		//if( m_bencode )
-		//{
-		//	int nVersion;
-		//	fread ( &nVersion, sizeof(int), 1, m_FileStream );
-		//	if( nVersion > 0 && CRijndael::VERSION >= nVersion )
-		//	{
-		//		m_nVersion = nVersion;
-		//		m_oRijndael.Initialize( CRijndael::sm_Version[nVersion-1], CRijndael::DEFAULT_KEY_LENGTH );
-		//	}
-		//	else
-		//	{
-		//		fseek ( m_FileStream, 0, SEEK_SET );
-		//	}
-		//}
 
 		ReadFileType ();
 		break;
@@ -126,12 +111,6 @@ BOOL CSerialFile::OpenFile ( const FOPENTYPE _Type, const char *_szFileName, boo
 			}
 			else	break;					// New File Not Create
 		}
-
-		//int nVersion = CRijndael::VERSION;
-		//m_oRijndael.Initialize( CRijndael::sm_Version[nVersion-1], CRijndael::DEFAULT_KEY_LENGTH );
-
-		//size_t wtcount = fwrite ( &nVersion, sizeof(int), 1, m_FileStream );
-		//GASSERT(wtcount==1&&"CSerialFile::OpenFile()");
 
 		WriteFileType ();
 		break;
@@ -224,23 +203,8 @@ inline size_t CSerialFile::read ( void* pbuffer, DWORD dwSize )
 
 	if ( m_bencode )
 	{
-		//if( m_nVersion != -1 )
-		//{
-		//	int nLen = m_oRijndael.GetEncryptLength( dwSize );
-		//	char * pBuffer = new char[nLen];
-		//	memset( pBuffer, 0, nLen );
-
-		//	rdcount = fread ( pBuffer, sizeof(char)*nLen, 1, m_FileStream );
-		//	m_oRijndael.DecryptEx( pBuffer, nLen );
-
-		//	memcpy( pbuffer, pBuffer, dwSize );
-		//	delete [] pBuffer;
-		//}
-		//else
-		{
-			rdcount = fread ( pbuffer, dwSize, 1, m_FileStream );
-			compbyte::decode ( (BYTE*)pbuffer, dwSize );
-		}
+		rdcount = fread ( pbuffer, dwSize, 1, m_FileStream );
+		compbyte::decode ( (BYTE*)pbuffer, dwSize );
 	}
 	else
 	{
@@ -265,20 +229,6 @@ inline size_t CSerialFile::write ( const void* pbuffer, DWORD dwSize )
 	size_t wtcount(0);
 	if ( m_bencode )
 	{
-		//int nLen = m_oRijndael.GetEncryptLength( dwSize );
-		//char * szBuffer = new char[nLen];
-		//memset( szBuffer, 0, nLen );
-		//m_oRijndael.EncryptEx( (char*)pbuffer, szBuffer, dwSize );
-
-		//wtcount = fwrite ( szBuffer, nLen, 1, m_FileStream );
-		//GASSERT(wtcount==1&&"CSerialFile::write()");
-
-		//if ( wtcount!=1 )
-		//{
-		//	CDebugSet::ToLogFile ( "file write error : %s", m_szFileName );
-		//}
-
-		//delete [] szBuffer;
 
 		BYTE *ptemp = new BYTE[dwSize];
 		memcpy ( ptemp, pbuffer, sizeof(BYTE)*dwSize );
@@ -623,3 +573,21 @@ BOOL CSerialFile::operator >> ( std::string &str )
 
 	return TRUE;
 }
+
+// X64 Architecture Support : Operator Update - YeXiuPH
+#ifdef _M_X64
+BOOL CSerialFile::operator >> (uint64_t &Value)
+{
+	GASSERT(m_OpenType == FOT_READ);
+	Value = 0;
+	int Num = (int)read(&Value, sizeof(Value));
+	return TRUE;
+}
+
+BOOL CSerialFile::operator << (uint64_t Value)
+{
+	GASSERT(m_OpenType == FOT_WRITE);
+	int Num = (int)write(&Value, sizeof(Value));
+	return TRUE;
+}
+#endif

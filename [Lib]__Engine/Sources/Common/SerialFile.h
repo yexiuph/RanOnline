@@ -1,19 +1,4 @@
-// [SerialFile.h]	class CSerialFile
-//
-//	[함수 추가] - JDH, 2003.01.16
-//
-//		ex) GLMobSchedule, DxCameraAni 의 파일 저장,로드부에 사용됨.
-//
-//		BOOL BeginBlock ();			( 현제 지점에 향후 블럭의 크기 파일에 마킹. )
-//		BOOL EndBlock ();			( 지정된 블럭 시작 지점부터 여기까지의 저장 크기를 마킹부에 저장. )
-//		DWORD ReadBlockSize ();		( 저장된 블럭 크기를 가져옴. )
-//
-#ifndef SERIALFILE_H_
-#define SERIALFILE_H_
-
-#if _MSC_VER > 1000
 #pragma once
-#endif // _MSC_VER > 1000
 
 #include <string>
 #include "./basestream.h"
@@ -83,6 +68,11 @@ public:
 
 	virtual BOOL operator << ( const std::string &str );
 
+// X64 Architecture Support : Operator Update - YeXiuPH
+#ifdef _M_X64
+	virtual BOOL operator << (uint64_t Value);
+#endif
+
 	template<typename TYPE>
 	BOOL operator << ( const std::vector<TYPE> &vecVALUE );
 
@@ -106,6 +96,11 @@ public:
 	virtual BOOL operator >> ( BYTE &Value );
 	virtual BOOL operator >> ( char &Value );
 	virtual BOOL operator >> ( std::string &str );
+
+// X64 Architecture Support : Operator Update - YeXiuPH
+#ifdef _M_X64
+	virtual BOOL operator >> (uint64_t &Value);
+#endif
 
 	virtual BOOL operator >> ( bool &Value );
 
@@ -157,5 +152,3 @@ BOOL CSerialFile::operator >> ( std::vector<TYPE> &vecVALUE )
 
 	return TRUE;
 }
-
-#endif // SERIALFILE_H_

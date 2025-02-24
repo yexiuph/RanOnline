@@ -378,6 +378,17 @@ BOOL CSerialMemory::operator >> ( bool &Value )
 	return TRUE;
 }
 
+BOOL CSerialMemory::operator>>(uint64_t& Value)
+{
+	GASSERT(m_OpenType == FOT_READ);
+	int Num = 0;
+
+	Value = FALSE;
+	Num = (int)read(&Value, sizeof(Value));
+
+	return TRUE;
+}
+
 BOOL CSerialMemory::operator >> ( std::string &str )
 {
 	GASSERT(m_OpenType==FOT_READ);
